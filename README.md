@@ -69,7 +69,7 @@ To learn more about how sessions are handled using the <code>express-sessions</c
 
 <h3><b>Email Server</b></h3>
 
-If you intend to use GMail as I have to send emails, then add this to the end of the <code>default.json</code> file:
+If you intend to use Google's SMTP server (configurable through your GMail Settings) to send emails, then add this to the end of the <code>default.json</code> file:
 
 <pre>
   <code>
@@ -84,7 +84,7 @@ If you intend to use GMail as I have to send emails, then add this to the end of
   </code>
 </pre>
 
-If you are using another vendors, or your own SMTP server, then swap the details under <code>"email"</code> for the details appropriate to your service.
+If you are using another vendors, or your own, SMTP server then swap the details under <code>"email"</code> for the details appropriate to your service.
 
 **Note** If using GMail, you will need to <a href='https://support.google.com/accounts/answer/6010255?hl=en' target='_blank'>Allow Less Secure Apps through your GMail Account</a>. You will also need to enable IMAP in your GMail settings. Other providers may have other requirements, refer to their documentation for advice.
 
