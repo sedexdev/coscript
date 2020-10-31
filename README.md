@@ -25,7 +25,7 @@ Start off by installing the application's dependencies. In the root directory ru
 
 Once this completes, create a directory called <code>config</code> in the root directory.
 
-**Note To run this application you will need to create a few things. Since this application is open for anyone to modify and play around with, it makes sense that there are no database configurations, encryption keys, email credentials, or personal information exposed on GitHub.
+**Note** To run this application you will need to create a few things. Since this application is open for anyone to modify and play around with, it makes sense that there are no database configurations, encryption keys, email credentials, or personal information exposed on GitHub.
 
 You will need to:
 
@@ -86,7 +86,7 @@ If you intend to use GMail as I have to send emails, then add this to the end of
 
 If you are using another vendors, or your own SMTP server, then swap the details under <code>"email"</code> for the details appropriate to your service.
 
-**Note. If using GMail, you will need to <a href='https://support.google.com/accounts/answer/6010255?hl=en' target='_blank'>Allow Less Secure Apps through your GMail Account</a>. You will also need to enable IMAP in your GMail settings. Other providers may have other requirements, refer to their documentation for advice.
+**Note** If using GMail, you will need to <a href='https://support.google.com/accounts/answer/6010255?hl=en' target='_blank'>Allow Less Secure Apps through your GMail Account</a>. You will also need to enable IMAP in your GMail settings. Other providers may have other requirements, refer to their documentation for advice.
 
 The application should now be ready to run in development mode.
 
@@ -102,4 +102,4 @@ Tests can be run from <code>root</code>, <code>view</code> and <code>model</code
 
 <code>npm run test</code>
 
-**Note that running <code>npm run test</code> from <code>root</code> will cause all tests in <code>view</code> to fail because the frontend uses <code>react-scripts test</code> which has its own test-runner configuration
+**Note** running <code>npm run test</code> from <code>root</code> will cause all tests in <code>view</code> to fail because the frontend uses <code>react-scripts test</code> which has its own test-runner configuration
