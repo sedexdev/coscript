@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectCard component renders correctly 1`] = `
+<div
+  className="card-item"
+>
+  <div
+    className="card-box-image-container"
+  >
+    <img
+      className="card-box-image"
+    />
+  </div>
+  <div
+    className="card-item-details"
+  >
+    <p />
+    <p />
+    <p
+      className="genres"
+    />
+    <button
+      className="small-btn"
+      type="button"
+    >
+      <span
+        className="btn-text"
+      >
+        <b>
+          Details
+        </b>
+      </span>
+    </button>
+  </div>
+</div>
+`;

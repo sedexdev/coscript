@@ -1,0 +1,106 @@
+{
+    "projects": [
+        {
+            "user": "5e58667d902d38559c802b13",
+            "userData": {
+                "name": "Test Name",
+                "avatar": "http://www.gravatar.com/avatar/123456789"
+            },
+            "title": "Test Title",
+            "author": "Test Name",
+            "genres": "Test Genres",
+            "description": "Test description",
+            "coverImg": [],
+            "collaborators": [],
+            "published": true,
+            "projectId": "5e58667d902d38559c802b14",
+            "content": "Test content",
+            "url": "/projects/5e58667d902d38559c802b14"
+        },
+        {
+            "user": "5e58667d902d38559c802b13",
+            "userData": {
+                "name": "Test Name",
+                "avatar": "http://www.gravatar.com/avatar/123456789"
+            },
+            "title": "Test Title 2",
+            "author": "Test Name 2",
+            "genres": "Test Genres 2",
+            "description": "Test description 2",
+            "coverImg": [],
+            "collaborators": [],
+            "published": true,
+            "projectId": "5e58667d902d38559c802b15",
+            "content": "Test content 2",
+            "url": "/projects/5e58667d902d38559c802b15"
+        },
+        {
+            "user": "5e58667d902d38559c802b13",
+            "userData": {
+                "name": "Test Name",
+                "avatar": "http://www.gravatar.com/avatar/123456789"
+            },
+            "title": "Test Title 3",
+            "author": "Test Name 3",
+            "genres": "Test Genres 3",
+            "description": "Test description 3",
+            "coverImg": [],
+            "collaborators": [],
+            "published": true,
+            "projectId": "5e58667d902d38559c802b16",
+            "content": "Test content 3",
+            "url": "/projects/5e58667d902d38559c802b16"
+        },
+        {
+            "user": "5e58667d902d38559c802b14",
+            "userData": {
+                "name": "Test Name 2",
+                "avatar": "http://www.gravatar.com/avatar/123456789"
+            },
+            "title": "Test Title 4",
+            "author": "Test Name 4",
+            "genres": "Test Genres 4",
+            "description": "Test description 4",
+            "coverImg": [],
+            "collaborators": [],
+            "published": true,
+            "projectId": "5e58667d902d38559c802b17",
+            "content": "Test content 4",
+            "url": "/projects/5e58667d902d38559c802b17"
+        },
+        {
+            "user": "5e58667d902d38559c802b14",
+            "userData": {
+                "name": "Test Name 2",
+                "avatar": "http://www.gravatar.com/avatar/123456789"
+            },
+            "title": "Test Title 5",
+            "author": "Test Name 5",
+            "genres": "Test Genres 5",
+            "description": "Test description 5",
+            "coverImg": [],
+            "collaborators": [],
+            "published": true,
+            "projectId": "5e58667d902d38559c802b18",
+            "content": "Test content 5",
+            "url": "/projects/5e58667d902d38559c802b18"
+        },
+        {
+            "user": "5e58667d902d38559c802b15",
+            "userData": {
+                "name": "Test Name 3",
+                "avatar": "http://www.gravatar.com/avatar/123456789"
+            },
+            "title": "Test Title 6",
+            "author": "Test Name 6",
+            "genres": "Test Genres 6",
+            "description": "Test description 6",
+            "coverImg": [],
+            "collaborators": [],
+            "published": true,
+            "projectId": "5e58667d902d38559c802b19",
+            "content": "Test content 6",
+            "url": "/projects/5e58667d902d38559c802b19"
+        }
+    ]
+}

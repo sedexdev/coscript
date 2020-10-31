@@ -1,0 +1,121 @@
+{
+    "folders": [
+        [
+            {
+                "parentId": null,
+                "id": "917y391h2jn1k2jnk1ndkiuch9d7y898ch3287h2",
+                "projectId": "f2ouhf923892ijh0nunfbuyv2f8y02j12euh12b8",
+                "userId": "5e58667d902d38559c802b01",
+                "label": "Master",
+                "folder": true,
+                "adminFolder": true,
+                "userBaseFolder": false,
+                "items": []
+            }
+        ],
+        [
+            {
+                "parentId": null,
+                "id": "92y92r3uhr2h39hqofq9wf0293fh2j039rhj293ru",
+                "projectId": "f2ouhf923892ijh0nunfbuyv2f8y02j12euh12b8",
+                "userId": "5e58667d902d38559c802b01",
+                "label": "Test Name",
+                "folder": true,
+                "adminFolder": false,
+                "userBaseFolder": true,
+                "items": []
+            }
+        ],
+        [
+            {
+                "parentId": null,
+                "id": "qeif1938ho1lsnlkjanscoqu91389eh92u3hr9238h",
+                "projectId": "f2ouhf923892ijh0nunfbuyv2f8y02j12euh12b8",
+                "userId": "5e58667d902d38559c802b01",
+                "label": "Test Label",
+                "folder": true,
+                "adminFolder": false,
+                "userBaseFolder": false,
+                "items": []
+            }
+        ],
+        [
+            {
+                "parentId": null,
+                "id": "khbkhjbkjppiwoj0192u197781821e2hu12e1ddsqdwqw",
+                "projectId": "f2ouhf923892ijh0nunfbuyv2f8y02j12euh12b8",
+                "userId": "5e58667d902d38559c802b04",
+                "label": "Test Name 2",
+                "folder": true,
+                "adminFolder": false,
+                "userBaseFolder": true,
+                "items": []
+            }
+        ],
+        [
+            {
+                "parentId": null,
+                "id": "lnakcbjhv1u378738eu0139ru192veuvjd1hbid1",
+                "projectId": "f2ouhf923892ijh0nunfbuyv2f8y02j12euh12b8",
+                "userId": "5e58667d902d38559c802b04",
+                "label": "Test Label 2",
+                "folder": true,
+                "adminFolder": false,
+                "userBaseFolder": false,
+                "items": []
+            }
+        ],
+        [
+            {
+                "parentId": null,
+                "id": "nkjbjhbiuwgd91hd01widino19uh192eg72gehbi9",
+                "projectId": "f2ouhf923892ijh0nunfbuyv2f8y02j12euh12b8",
+                "userId": "5e58667d902d38559c802b08",
+                "label": "Test Name 3",
+                "folder": true,
+                "adminFolder": false,
+                "userBaseFolder": true,
+                "items": []
+            }
+        ],
+        [
+            {
+                "parentId": null,
+                "id": "wdciwehbwebf92u32321p301in01ndjnsds9u911wd1wdf",
+                "projectId": "f2ouhf923892ijh0nunfbuyv2f8y02j12euh12b8",
+                "userId": "5e58667d902d38559c802b08",
+                "label": "Test Label 3",
+                "folder": true,
+                "adminFolder": false,
+                "userBaseFolder": false,
+                "items": []
+            }
+        ],
+        [
+            {
+                "parentId": null,
+                "id": "d13dou2h398293r8h2300dwbd1g81yge12e12r",
+                "projectId": "f2ouhf923892ijh0nunfbuyv2f8y02j12euh12b8",
+                "userId": "5e58667d902d38559c802b11",
+                "label": "Test Name 4",
+                "folder": true,
+                "adminFolder": false,
+                "userBaseFolder": true,
+                "items": []
+            }
+        ],
+        [
+            {
+                "parentId": null,
+                "id": "qqckbclqnqw01020u19y19g21b2e2517vebkjnco",
+                "projectId": "f2ouhf923892ijh0nunfbuyv2f8y02j12euh12b8",
+                "userId": "5e58667d902d38559c802b11",
+                "label": "Test Label 4",
+                "folder": true,
+                "adminFolder": false,
+                "userBaseFolder": false,
+                "items": []
+            }
+        ]
+    ]
+}

@@ -1,0 +1,187 @@
+.login-cover {
+    background: url("../../img/desktop-background-2.jpg") center center
+        no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 16vh 16vh 16vh 16vh 16vh 16vh;
+}
+
+.login-container {
+    padding: 20px;
+    font-size: 1.4rem;
+    margin: 0 auto;
+    width: 150%;
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+.login-header {
+    font-family: "Dancing Script", cursive;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+.login-form p {
+    width: 85%;
+}
+
+.log-label {
+    color: var(--button-green, #4af030);
+    width: 200px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.log-input {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    border-top: none;
+    border-right: none;
+    border-bottom: 4px solid #fff;
+    border-left: none;
+    background-color: transparent;
+    color: #fff;
+    width: 80%;
+    height: 25px;
+    margin: 10px 0 10px 0;
+    padding-left: 5px;
+}
+
+.log-input[placeholder]::-webkit-input-placeholder {
+    font-family: "Lato", sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.log-input[placeholder]:-ms-input-placeholder {
+    font-family: "Lato", sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.log-input[placeholder]::-ms-input-placeholder {
+    font-family: "Lato", sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.log-input[placeholder]::-moz-placeholder {
+    font-family: "Lato", sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.log-input[placeholder]::placeholder {
+    font-family: "Lato", sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.log-input:focus {
+    outline: 0;
+}
+
+.log-link {
+    display: inline-block;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.login-link {
+    display: inline;
+    text-decoration: none;
+    color: var(--button-green, #4af030);
+}
+
+.login-submit {
+    background-color: var(--button-green, #4af030);
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    margin: 4px 4px 4px 0;
+    padding: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-submit:hover {
+    background-color: var(--button-green-hover, #43bb30);
+    -webkit-transition: background-color, 0.2s;
+    transition: background-color, 0.2s;
+}
+
+.login-submit:focus {
+    outline: 0;
+}
+
+.login-submit-container {
+    display: -webkit-box;
+    display: flex;
+}
+
+.login-loading-spinner {
+    display: block;
+    height: 35px;
+    width: 35px;
+    margin: 25px 0 0 20px;
+}
+
+@media (max-width: 1000px) {
+    .login-cover {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+
+    .login-container {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .log-input {
+        width: 50%;
+    }
+
+    .log-input[name="username"] {
+        margin-left: 8px;
+    }
+
+    .log-input[name="password"] {
+        margin-left: 13px;
+    }
+
+    .login-form p {
+        width: 85%;
+    }
+}
+
+@media (max-width: 500px) {
+    .login-container {
+        width: 80%;
+    }
+
+    .log-input {
+        width: 220px;
+    }
+
+    .log-input[name="username"] {
+        margin-left: 0;
+    }
+
+    .log-input[name="password"] {
+        margin-left: 0;
+    }
+
+    .login-form p {
+        font-size: 1.1rem;
+    }
+}

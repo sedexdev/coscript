@@ -1,0 +1,24 @@
+{
+    "messages": [
+        {
+            "id": "123456abcdefghijklmnopqrstuvwxyz",
+            "text": "Testing",
+            "projectTitle": "Test Title",
+            "projectId": "123456",
+            "recipientId": "10987654321",
+            "sender": { "id": "12345678910", "name": "Test Name" },
+            "read": false,
+            "friendRequest": false
+        },
+        {
+            "id": "654321abcdefghijklmnopqrstuvwxyz",
+            "text": "Testing 2",
+            "projectTitle": "Test Title",
+            "projectId": "123456",
+            "recipientId": "10987654321",
+            "sender": { "id": "12345678910", "name": "Test Name" },
+            "read": false,
+            "friendRequest": false
+        }
+    ]
+}

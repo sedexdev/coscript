@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostButton component renders correctly 1`] = `
+<input
+  type="submit"
+  value="Verify"
+/>
+`;

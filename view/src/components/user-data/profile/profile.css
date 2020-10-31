@@ -1,0 +1,486 @@
+.profile-container {
+    margin-left: 300px;
+    margin-bottom: 100px;
+}
+
+.profile-avatar-container {
+    border-bottom: 1px solid var(--background-color-mid, #444);
+    text-align: center;
+    width: 100%;
+}
+
+.profile-avatar {
+    height: auto;
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 10%;
+}
+
+.avatar-caption {
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.profile-image-text-container {
+    margin-top: 10px;
+}
+
+.projects-warning {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+.profile-options-container {
+    width: 70%;
+    padding: 10% 10% 10% 5%;
+}
+
+.profile-options a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--background-color-mid, #444);
+    padding: 15px 0;
+    border-bottom: 1px transparent;
+}
+
+.profile-options a:hover {
+    color: var(--button-green, #4af030);
+    border-bottom: 1px solid var(--button-green, #4af030);
+    -webkit-transition: color, border-bottom, 0.2s;
+    transition: color, border-bottom, 0.2s;
+}
+
+.user-info-container {
+    grid-column-start: 2;
+}
+
+.profile-h1 {
+    display: block;
+    font-family: "Dancing Script", cursive;
+    font-size: 4rem;
+    font-weight: 200;
+    text-align: center;
+    padding: 2% 0;
+    margin: 10px 0;
+}
+
+.profile-heading {
+    display: block;
+    font-family: "Dancing Script", cursive;
+    font-weight: 200;
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 20px 0 !important;
+    padding-bottom: 10px;
+}
+
+.user-info-container {
+    width: 90%;
+    margin: 0 auto 20px auto;
+}
+
+.profile-form-container {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-form {
+    display: block;
+    width: 100%;
+    margin-top: 10px !important;
+}
+
+.profile-box {
+    width: 70%;
+    margin: auto;
+}
+
+.profile-label {
+    display: block;
+    font-weight: bold !important;
+    margin-bottom: 5px;
+}
+
+.profile-data-container {
+    display: -webkit-box;
+    display: flex;
+    width: 100%;
+}
+
+.profile-data {
+    width: 100%;
+}
+
+.data-display {
+    list-style: none;
+    text-align: justify;
+    margin: 0;
+    padding: 5px;
+}
+
+.profile-list-item {
+    display: block;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.profile-link:hover {
+    color: var(--button-green, #4af030);
+}
+
+.displayed-name {
+    margin: 15px 0 25px 5px;
+}
+
+#username-radio {
+    margin-bottom: 15px;
+}
+
+#username-radio,
+#myname-radio {
+    margin-right: 5px;
+}
+
+.edit-icon-btn {
+    background: none;
+    border: none;
+    height: 40px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.edit-icon-btn:focus {
+    outline: 0;
+}
+
+.edit-input-icon {
+    height: auto;
+    width: 20px;
+}
+
+.edit-input-icon:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: 0.2s, -webkit-transform;
+    transition: 0.2s, -webkit-transform;
+    transition: transform, 0.2s;
+    transition: transform, 0.2s, -webkit-transform;
+}
+
+.save-btn-container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.profile-edit-container,
+.edit-project-details-window,
+.delete-project-window {
+    position: fixed;
+    margin: 0 auto;
+    top: 30%;
+    right: 0;
+    left: 0;
+    width: 50%;
+    background: rgb(235, 235, 235);
+    box-shadow: 5px 5px 10px rgb(177, 177, 177);
+}
+
+.profile-edit-heading,
+.delete-project-heading  {
+    display: block;
+    padding: 20px 0 0 30px;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.delete-project-heading {
+    font-size: 1.6rem;
+}
+
+.close-window {
+    background-color: none;
+    border: none;
+    cursor: pointer;
+}
+
+.textarea-container {
+    padding: 30px;
+    margin: auto;
+}
+
+.profile-edit-textarea {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 200;
+    width: 100%;
+    height: 140px;
+}
+
+.btn-container {
+    display: -webkit-box;
+    display: flex;
+    float: right;
+    margin: 0 30px 20px 0;
+}
+
+.cancel-btn,
+.delete-btn,
+.confirm-btn {
+    background: none;
+    border: none;
+    width: 70px;
+    height: 35px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-transition: color, background-color, 0.1s;
+    transition: color, background-color, 0.1s;
+}
+
+.cancel-btn {
+    background-color: #fff;
+    margin-right: 10px;
+}
+
+.delete-btn {
+    background-color: red;
+    margin-right: 10px;
+}
+
+.confirm-btn {
+    background-color: var(--button-green);
+}
+
+.cancel-btn:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.delete-btn:hover {
+    background-color: rgb(190, 2, 2);
+}
+
+.confirm-btn:hover {
+    background-color: var(--button-green-hover, #43bb30);
+}
+
+.cancel-btn:focus,
+.delete-btn:focus,
+.confirm-btn:focus {
+    outline: 0;
+}
+
+.my-projects-list {
+    width: 70%;
+    margin: 40px auto;
+}
+
+.profile-project-list-element-wrapper {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(var(--button-green, #4af030)),
+        to(rgb(247, 252, 0))
+    );
+    background: linear-gradient(
+        to right,
+        var(--button-green, #4af030),
+        rgb(247, 252, 0)
+    );
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.profile-project-list-element-wrapper:hover {
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(rgb(247, 252, 0)),
+        to(var(--button-green, #4af030))
+    );
+    background: linear-gradient(
+        to right,
+        rgb(247, 252, 0),
+        var(--button-green, #4af030)
+    );
+}
+
+.profile-collaborations-list-element-wrapper {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(rgb(253, 43, 43)),
+        to(rgb(104, 0, 117))
+    );
+    background: linear-gradient(
+        to right,
+        rgb(253, 43, 43),
+        rgb(104, 0, 117)
+    );
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.profile-collaborations-list-element-wrapper:hover {
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(rgb(104, 0, 117)),
+        to(rgb(253, 43, 43))
+    );
+    background: linear-gradient(
+        to right,
+        rgb(104, 0, 117),
+        rgb(253, 43, 43)
+    );
+}
+
+.profile-project-list-element {
+    list-style: none;
+    line-height: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.profile-project-list-element:hover {
+    color: #fff;
+}
+
+.edit-project-details-window {
+    top: 15%;
+    padding: 50px;
+}
+
+.delete-project-window {
+    padding: 20px !important;
+}
+
+.edit-project-heading {
+    display: block;
+    padding: 0 0 30px 0;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.edit-project-form {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.edit-project-label {
+    display: block;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.edit-project-data-input {
+    height: 30px;
+    padding-left: 2px;
+}
+
+.edit-project-data-textarea {
+    height: 120px;
+    padding-left: 2px;
+}
+
+.project-edit-btn-container {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    margin: 20px 0 0 0;
+}
+
+.project-options-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.delete-project-btn {
+    background: none;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+
+.delete-project-btn:hover {
+    -webkit-transform: scale(1.8);
+    transform: scale(1.8);
+    -webkit-transition: 0.2s, -webkit-transform;
+    transition: 0.2s, -webkit-transform;
+    transition: transform, 0.2s;
+    transition: transform, 0.2s, -webkit-transform;
+    cursor: pointer;
+}
+
+.update-project-loading-spinner {
+    height: auto;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.profile-project-loading-spinner {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 30px;
+    margin: auto;
+}
+
+@media (max-width: 500px) {
+
+    .user-info-container {
+        width: 100%;
+    }
+
+    .profile-container {
+        margin-left: 0;
+    }
+
+    .profile-visibility {
+        margin: 15px 0 15px 5px;
+    }
+
+    .profile-edit-container,
+    .delete-project-window {
+        width: 90%;
+    }
+
+    .edit-project-details-window {
+        width: 70%;
+        padding: 20px;
+    }
+
+    .my-projects-list {
+        width: 95%;
+    }
+}

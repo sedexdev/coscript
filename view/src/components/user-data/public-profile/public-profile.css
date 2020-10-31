@@ -1,0 +1,183 @@
+.public-profile-main {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+.public-profile-loading-spinner-container {
+    text-align: center;
+}
+
+.public-profile-loading-spinner {
+    height: auto;
+    width: 100px;
+    margin: 200px 0;
+}
+
+.public-profile-header {
+    border-bottom: 1px solid #333;
+    margin: 100px 0 30px 0;
+}
+
+.public-profile-avatar {
+    border-radius: 50%;
+    height: auto;
+    width: 150px;
+    margin-top: 20px;
+}
+
+.profile-contact-form {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.profile-pipe {
+    color: #333;
+}
+
+.public-profile-display-name {
+    display: block;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 20px 0;
+}
+
+.profile-connect-btn {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    color: var(--button-green, #4af030);
+    cursor: pointer;
+}
+
+.profile-connect-btn:hover {
+    color: var(--button-green-hover, #43bb30);
+}
+
+.public-profile-info-main {
+    border-bottom: 1px solid #333;
+    padding: 10px 10px 50px 10px;
+}
+
+.public-profile-info-container {
+    display: -webkit-box;
+    display: flex;
+    text-align: left !important;
+}
+
+.public-profile-heading {
+    font-family: "Dancing Script", cursive;
+    font-weight: 200;
+    font-size: 1.8rem;
+}
+
+.projects {
+    display: block;
+    font-size: 2.8rem;
+    margin-bottom: 60px;
+}
+
+.public-profile-info {
+    line-height: 25px;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.about {
+    width: 55%;
+}
+
+.public-profile-about {
+    text-align: justify !important;
+}
+
+.authors {
+    width: 22.5%;
+}
+
+.books {
+    width: 22.5%;
+}
+
+.public-profile-user-projects {
+    margin: 60px 0;
+}
+
+.user-project-cards {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    row-gap: 40px;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+@media (max-width: 1100px) {
+    .public-profile-info-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+    }
+
+    .public-profile-info-container {
+        text-align: center !important;
+    }
+
+    .about,
+    .authors,
+    .books {
+        width: 100%;
+        margin: 20px 0;
+        padding: 0;
+    }
+
+    .public-profile-heading {
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 1200px) {
+    .user-project-cards {
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+@media (max-width: 940px) {
+    .user-project-cards {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media (max-width: 700px) {
+    .public-profile-main {
+        width: 95%;
+    }
+
+    .user-project-cards {
+        grid-template-columns: 100%;
+    }
+
+    .public-profile-display-name {
+        font-size: 1.2rem;
+    }
+
+    .profile-connect-btn {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .public-profile-display-name {
+        font-size: 1rem;
+    }
+
+    .profile-connect-btn {
+        font-size: 1rem;
+    }
+}

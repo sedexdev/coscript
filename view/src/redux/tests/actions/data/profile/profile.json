@@ -1,0 +1,14 @@
+{
+    "profile": {
+        "buttonID": "username-radio",
+        "displayName": "Test Name",
+        "about": "Test about",
+        "authors": [],
+        "books": [],
+        "userProjects": [],
+        "collaboratingProjects": [],
+        "messages": [],
+        "friends": [],
+        "blockedUsers": []
+    }
+}

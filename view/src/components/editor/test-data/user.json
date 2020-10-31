@@ -1,0 +1,42 @@
+{
+    "userId": "5e58667d902d38559c802b13",
+    "avatar": "www.gravatar.com/avatar/123456789",
+    "name": "Test",
+    "username": "Test101",
+    "passwordHistory": [],
+    "email": "user@email.com",
+    "profile": {
+        "buttonID": "username-radio",
+        "displayName": "Test",
+        " about": "",
+        "authors": [],
+        "books": [],
+        "userProjects": [
+            {
+                "user": "5e58667d902d38559c802b13",
+                "userData": {
+                    "name": "Test Name",
+                    "avatar": "http://www.gravatar.com/avatar/123456789"
+                },
+                "title": "Test Title",
+                "author": "Test Name",
+                "genres": "Test Genres",
+                "description": "Test description",
+                "coverImg": [],
+                "collaborators": [],
+                "published": false,
+                "projectId": "5e58667d902d38559c802b14",
+                "content": "Test content",
+                "url": "/projects/5e58667d902d38559c802b14"
+            }
+        ],
+        "collaboratingProjects": [],
+        "messages": [],
+        "friends": [],
+        "blockedUsers": []
+    },
+    "isRegistered": true,
+    "isLoggedIn": true,
+    "authToken": "",
+    "passwordUpdated": false
+}

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Verify component renders correctly 1`] = `
+<main
+  className="verify-body"
+>
+  <section
+    className="verify-container"
+  >
+    <h1
+      className="coscript-h1"
+    >
+      CoScript
+    </h1>
+    <p
+      className="verify-text"
+    >
+      Please enter the email address you signed up
+ with:
+    </p>
+    <div
+      className="verify-email-container"
+    >
+      <form
+        className="verify-email"
+        onSubmit={[Function]}
+      >
+        <input
+          className="v-email"
+          name="userEmail"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="Email"
+          type="text"
+        />
+        <input
+          className="square-btn"
+          type="submit"
+          value="Submit"
+        />
+      </form>
+    </div>
+    <a
+      className="home-link"
+      href="/"
+      onClick={[Function]}
+    >
+      Back Home
+    </a>
+  </section>
+</main>
+`;

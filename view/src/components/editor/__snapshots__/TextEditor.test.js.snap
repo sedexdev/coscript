@@ -1,0 +1,389 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextEditor component renders correctly 1`] = `
+Array [
+  <nav
+    className="navbar"
+  />,
+  <aside
+    className="file-panel-container"
+  >
+    <div
+      className="file-panel"
+    >
+      <div
+        className="file-menu-container"
+      >
+        <button
+          className="file-btn new"
+          onClick={[Function]}
+          type="button"
+        >
+          New
+        </button>
+        <button
+          className="file-btn publish"
+          onClick={[Function]}
+          type="button"
+        >
+          Publish
+        </button>
+        <button
+          className="file-btn"
+          onClick={[Function]}
+          type="button"
+        >
+          Folder
+        </button>
+        <button
+          className="file-btn"
+          onClick={[Function]}
+          type="button"
+        >
+          File
+        </button>
+      </div>
+      <div
+        className="panel-title-container"
+      >
+        <h3
+          className="panel-title panel-text"
+        >
+          My Files
+        </h3>
+      </div>
+      <div
+        className="files"
+      >
+        <div
+          className="project-folders-container"
+        />
+      </div>
+      <div
+        className="panel-title-container"
+      >
+        <h3
+          className="panel-title panel-text"
+        >
+          Friends Online
+        </h3>
+      </div>
+    </div>
+    <button
+      className="panel-btn"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="reveal-arrow"
+      >
+        ›
+      </span>
+    </button>
+  </aside>,
+  <main
+    className="text-editor-main"
+  >
+    <div
+      className="text-editor-ui-container"
+    >
+      <div
+        className="editor-toolbar"
+      >
+        <div
+          className="font-menus"
+        >
+          <select
+            className="font-menu"
+            onChange={[Function]}
+          >
+            <option
+              value="Times New Roman"
+            >
+              Times New Roman
+            </option>
+            <option
+              value="Consolas"
+            >
+              Consolas
+            </option>
+            <option
+              value="Tahoma"
+            >
+              Tahoma
+            </option>
+            <option
+              value="Calibri"
+            >
+              Calibri
+            </option>
+            <option
+              value="Arial"
+            >
+              Arial
+            </option>
+            <option
+              value="Verdana"
+            >
+              Verdana
+            </option>
+            <option
+              value="Trebuchet MS"
+            >
+              Trebuchet MS
+            </option>
+            <option
+              value="Courier New"
+            >
+              Courier New
+            </option>
+            <option
+              value="Comic Sans MS"
+            >
+              Comic Sans MS
+            </option>
+            <option
+              value="Brush Script MT"
+            >
+              Brush Script MT
+            </option>
+            <option
+              value="Impact"
+            >
+              Impact
+            </option>
+          </select>
+          <select
+            className="font-menu"
+            onChange={[Function]}
+          >
+            <option
+              value={0}
+            >
+              8
+            </option>
+            <option
+              value={1}
+            >
+              9
+            </option>
+            <option
+              value={2}
+            >
+              10
+            </option>
+            <option
+              value={3}
+            >
+              11
+            </option>
+            <option
+              value={4}
+            >
+              12
+            </option>
+            <option
+              value={5}
+            >
+              13
+            </option>
+            <option
+              value={6}
+            >
+              14
+            </option>
+            <option
+              value={7}
+            >
+              15
+            </option>
+          </select>
+        </div>
+        <i
+          className="fas fa-palette colour-icon"
+        />
+        <input
+          className="colourBtn"
+          id="font-colour"
+          onChange={[Function]}
+          title="Change Font Colour"
+          type="color"
+        />
+        <i
+          className="fas fa-highlighter colour-icon"
+        />
+        <input
+          className="colourBtn"
+          onChange={[Function]}
+          title="Highlight"
+          type="color"
+        />
+        <button
+          className="boldBtn"
+          onClick={[Function]}
+          title="Bold"
+        >
+          <i
+            className="fas fa-bold"
+          />
+        </button>
+        <button
+          className="italicBtn"
+          onClick={[Function]}
+          title="Italic"
+        >
+          <i
+            className="fas fa-italic"
+          />
+        </button>
+        <button
+          className="underlineBtn"
+          onClick={[Function]}
+          title="Underlined"
+        >
+          <i
+            className="fas fa-underline"
+          />
+        </button>
+        <button
+          className="subscriptBtn"
+          onClick={[Function]}
+          title="Subscript"
+        >
+          <i
+            className="fas fa-subscript"
+          />
+        </button>
+        <button
+          className="superScriptBtn"
+          onClick={[Function]}
+          title="Superscript"
+        >
+          <i
+            className="fas fa-superscript"
+          />
+        </button>
+        <button
+          className="strikeBtn"
+          onClick={[Function]}
+          title="Strike-through"
+        >
+          <i
+            className="fas fa-strikethrough"
+          />
+        </button>
+        <button
+          className="rmvFormatBtn"
+          onClick={[Function]}
+          title="Remove Formatting"
+        >
+          <i
+            className="fas fa-remove-format"
+          />
+        </button>
+        <button
+          className="ulBtn"
+          onClick={[Function]}
+          title="Bullet Points"
+        >
+          <i
+            className="fas fa-list-ul"
+          />
+        </button>
+        <button
+          className="oltBtn"
+          onClick={[Function]}
+          title="Numbered List"
+        >
+          <i
+            className="fas fa-list-ol"
+          />
+        </button>
+        <button
+          className="leftAlignBtn"
+          onClick={[Function]}
+          title="Align Left"
+        >
+          <i
+            className="fas fa-align-left"
+          />
+        </button>
+        <button
+          className="centerAlignBtn"
+          onClick={[Function]}
+          title="Align Center"
+        >
+          <i
+            className="fas fa-align-center"
+          />
+        </button>
+        <button
+          className="rightAlignBtn"
+          onClick={[Function]}
+          title="Align Right"
+        >
+          <i
+            className="fas fa-align-right"
+          />
+        </button>
+        <button
+          className="justifyAlignBtn"
+          onClick={[Function]}
+          title="Align Justify"
+        >
+          <i
+            className="fas fa-align-justify"
+          />
+        </button>
+        <button
+          className="undoBtn"
+          onClick={[Function]}
+          title="Undo"
+        >
+          <i
+            className="fas fa-undo"
+          />
+        </button>
+        <button
+          className="redoBtn"
+          onClick={[Function]}
+          title="Redo"
+        >
+          <i
+            className="fas fa-redo"
+          />
+        </button>
+        <button
+          className="linkBtn"
+          onClick={[Function]}
+          title="Link"
+        >
+          <i
+            className="fas fa-link"
+          />
+        </button>
+        <button
+          className="unlinkBtn"
+          onClick={[Function]}
+          title="Unlink"
+        >
+          <i
+            className="fas fa-unlink"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="text-editor-wrapper"
+    >
+      <iframe
+        className="text-editor"
+        frameBorder="0"
+        id="text-editor"
+        name="text-editor"
+        title="Rich editor"
+      />
+    </div>
+  </main>,
+]
+`;

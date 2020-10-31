@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Redirect component renders correctly 1`] = `
+<main
+  className="redirect-body"
+>
+  <section
+    className="redirect-container"
+  >
+    <h1
+      className="coscript-h1"
+    >
+      CoScript
+    </h1>
+    <p
+      className="verify-text"
+    >
+      Logging you out. Redirecting...
+    </p>
+    <div
+      className="ajax-spinner-container"
+    >
+      <img
+        alt="loading spinner"
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "loading.svg",
+          }
+        }
+      />
+    </div>
+  </section>
+</main>
+`;

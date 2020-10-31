@@ -1,0 +1,64 @@
+.copyright-main,
+.agreement-main,
+.terms-main {
+    width: 50%;
+    text-align: justify;
+    line-height: 25px;
+    margin: 150px auto;
+    word-wrap: break-word;
+}
+
+.copyright-header,
+.agreement-header,
+.terms-header {
+    border-bottom: 1px solid var(--button-green, #4af030);
+}
+
+.copyright-h1,
+.agreement-h1,
+.terms-h1 {
+    line-height: 40px;
+}
+
+.copyright-introduction,
+.agreement-introduction,
+.terms-body {
+    display: block;
+    margin: 40px 0 10px 0;
+}
+
+.copyright-introduction-note {
+    font-weight: bold;
+}
+
+.source-info-container {
+    width: 100%;
+    margin: 60px auto;
+}
+
+.source-link-img {
+    height: auto;
+    width: 100%;
+}
+
+.source-info-description {
+    display: block;
+    margin: 20px 0;
+}
+
+@media (max-width: 900px) {
+    .copyright-main,
+    .agreement-main,
+    .terms-main {
+        width: 65%;
+    }
+}
+
+@media (max-width: 700px) {
+    .copyright-main,
+    .agreement-main,
+    .terms-main {
+        text-align: left;
+        width: 85%;
+    }
+}

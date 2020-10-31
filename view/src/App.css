@@ -1,0 +1,46 @@
+/*
+=================================================================================================
+General Styles
+=================================================================================================
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    color: var(--background-color-mid, #444);
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.lead {
+    margin-top: 0 !important;
+    font-weight: bold;
+}
+
+/*
+=================================================================================================
+Colours
+=================================================================================================
+*/
+
+:root {
+    --button-green: #4af030;
+    --button-green-hover: #43bb30;
+    --background-color-light: #cecece;
+    --background-color-mid: #444;
+    --background-color-dark: #000;
+    --blue-border: #59bdff;
+    --editor-background: #d0cfce;
+    --danger: #fb1515;
+}

@@ -1,0 +1,118 @@
+#projects-banner {
+    background: url("../../img/banner1.jpg") center center no-repeat;
+    background-size: cover;
+    height: 40vh;
+    width: 100%;
+    margin-top: 70px;
+}
+
+#publications-banner {
+    background: url("../../img/banner2.jpg") center center no-repeat;
+    background-size: cover;
+    height: 40vh;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.banner-container {
+    color: #fff;
+}
+
+.banner-heading {
+    display: block;
+    font-family: "Dancing Script", cursive;
+    font-size: 12vw;
+    font-weight: 200;
+    text-align: center;
+    line-height: 40vh;
+    margin-top: 0;
+}
+
+.search-bar-container {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: var(--background-color-mid, #444);
+    padding: 10px 0;
+    width: 100%;
+}
+
+.search-bar {
+    width: 80%;
+}
+
+.search-form {
+    display: -webkit-box;
+    display: flex;
+}
+
+.search-input {
+    border: none;
+    height: 45px;
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 0 0 0 10px;
+}
+
+.sort-by-selector {
+    border: none;
+    padding: 0 10px;
+}
+
+.search-input:focus,
+.sort-by-selector:focus,
+.sort-option:focus {
+    outline: 0;
+}
+
+.project-publication-spinner-container {
+    text-align: center;
+}
+
+.project-publication-spinner {
+    height: 75px;
+    width: 75px;
+    margin: 50px auto;
+    padding-bottom: 100px;
+}
+
+.project-cards-container {
+    text-align: center;
+    display: grid;
+    grid-gap: 40px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 80%;
+    margin: 80px auto;
+}
+
+.no-projects-msg {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    margin: 100px 0;
+}
+
+@media (max-width: 1200px) {
+    .project-cards-container {
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+@media (max-width: 850px) {
+    .project-cards-container {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-cards-container {
+        grid-template-columns: 100%;
+        width: 95%;
+        -webkit-box-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+}

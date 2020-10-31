@@ -1,0 +1,372 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile component renders correctly 1`] = `
+<main
+  className="profile-container"
+>
+  <nav
+    className="profile-mobile-nav"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <i
+        className="home-icon fas fa-home fa-3x"
+      />
+    </a>
+    <button
+      className="profile-dropdown-icon-link"
+      onClick={[Function]}
+    >
+      <img
+        alt="Burger menu icon"
+        className="profile-dropdown-icon"
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "menu.svg",
+          }
+        }
+      />
+    </button>
+    <div
+      className="dropdown-menu dropdown-content"
+      id="dropdown-nav"
+    >
+      <a
+        href="/profile"
+        onClick={[Function]}
+      >
+        <p
+          className="dropdown-link"
+        >
+          My Profile
+        </p>
+      </a>
+      <a
+        href="/messages"
+        onClick={[Function]}
+      >
+        <p
+          className="dropdown-link"
+        >
+          Messages
+        </p>
+      </a>
+      <a
+        href="/projects"
+        onClick={[Function]}
+      >
+        <p
+          className="dropdown-link"
+        >
+          Active Projects
+        </p>
+      </a>
+      <a
+        href="/publications"
+        onClick={[Function]}
+      >
+        <p
+          className="dropdown-link"
+        >
+          Publications
+        </p>
+      </a>
+      <a
+        href=" "
+        onClick={[Function]}
+      >
+        <p
+          className="dropdown-link"
+        >
+          Logout
+        </p>
+      </a>
+    </div>
+  </nav>
+  <div
+    className="user-info-container"
+  >
+    <h1
+      className="profile-h1"
+    >
+      My Profile
+    </h1>
+    <section
+      className="profile"
+    >
+      <h2
+        className="profile-heading"
+        id="profile-h2"
+      >
+        Profile
+      </h2>
+      <div
+        className="profile-form-container"
+      >
+        <div
+          className="profile-form"
+        >
+          <div
+            className="profile-box"
+          >
+            <p>
+              <b>
+                Publicly visible name:
+              </b>
+            </p>
+            <div
+              className="displayed-name"
+            >
+              <input
+                id="username-radio"
+                name="name-radio"
+                onClick={[Function]}
+                type="radio"
+              />
+              <label
+                htmlFor="username"
+              >
+                Username
+              </label>
+              <br />
+              <input
+                id="myname-radio"
+                name="name-radio"
+                onClick={[Function]}
+                type="radio"
+              />
+              <label
+                htmlFor="myname"
+              >
+                My name
+              </label>
+            </div>
+          </div>
+          <div
+            className="profile-box"
+          >
+            <label
+              className="profile-label"
+              htmlFor="user-about"
+            >
+              About Me:
+            </label>
+            <div
+              className="profile-data-container"
+            >
+              <div
+                className="profile-data"
+              >
+                <ul
+                  className="data-display"
+                />
+              </div>
+              <button
+                className="edit-icon-btn"
+                type="button"
+              >
+                <img
+                  alt="Edit input icon"
+                  className="edit-input-icon"
+                  name="about"
+                  onClick={[Function]}
+                  src={
+                    Object {
+                      "ReactComponent": Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "render": [Function],
+                      },
+                      "__esModule": true,
+                      "default": "edit.svg",
+                    }
+                  }
+                />
+              </button>
+            </div>
+          </div>
+          <div
+            className="profile-box"
+          >
+            <label
+              className="profile-label"
+              htmlFor="user-authors"
+            >
+              Favourite Authors:
+            </label>
+            <div
+              className="profile-data-container"
+            >
+              <div
+                className="profile-data"
+              >
+                <ul
+                  className="data-display"
+                />
+              </div>
+              <button
+                className="edit-icon-btn"
+                type="button"
+              >
+                <img
+                  alt="Edit input icon"
+                  className="edit-input-icon"
+                  name="authors"
+                  onClick={[Function]}
+                  src={
+                    Object {
+                      "ReactComponent": Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "render": [Function],
+                      },
+                      "__esModule": true,
+                      "default": "edit.svg",
+                    }
+                  }
+                />
+              </button>
+            </div>
+          </div>
+          <div
+            className="profile-box"
+          >
+            <label
+              className="profile-label"
+              htmlFor="user-books"
+            >
+              Favourite Books:
+            </label>
+            <div
+              className="profile-data-container"
+            >
+              <div
+                className="profile-data"
+              >
+                <ul
+                  className="data-display"
+                />
+              </div>
+              <button
+                className="edit-icon-btn"
+                type="button"
+              >
+                <img
+                  alt="Edit input icon"
+                  className="edit-input-icon"
+                  name="books"
+                  onClick={[Function]}
+                  src={
+                    Object {
+                      "ReactComponent": Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "render": [Function],
+                      },
+                      "__esModule": true,
+                      "default": "edit.svg",
+                    }
+                  }
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      className="photo"
+    >
+      <h2
+        className="profile-heading"
+        id="photo-h2"
+      >
+        Photo
+      </h2>
+      <div
+        className="change-avatar-container"
+      >
+        <img
+          alt="Users profile avatar"
+          className="avatar"
+          src="www.gravatar.com/avatar/123456789"
+        />
+        <div
+          className="profile-image-text-container"
+        >
+          <p>
+            Want a different image?
+          </p>
+          <label
+            className="profile-image-text"
+            htmlFor="profile-image-upload"
+          >
+            Click here
+            <input
+              className="choose-file"
+              id="profile-image-upload"
+              type="file"
+            />
+          </label>
+          <p>
+             to upload a new one
+          </p>
+        </div>
+        <br />
+      </div>
+    </section>
+    <section
+      className="my-projects"
+    >
+      <h2
+        className="profile-heading"
+        id="projects-h2"
+      >
+        My Projects
+      </h2>
+      <img
+        alt="loading"
+        className="profile-project-loading-spinner"
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "loading-black.svg",
+          }
+        }
+      />
+    </section>
+    <section
+      className="starred-projects"
+    >
+      <h2
+        className="profile-heading"
+        id="starred-projects-h2"
+      >
+        Collaborations
+      </h2>
+      <img
+        alt="loading"
+        className="profile-project-loading-spinner"
+        src={
+          Object {
+            "ReactComponent": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+            "__esModule": true,
+            "default": "loading-black.svg",
+          }
+        }
+      />
+    </section>
+  </div>
+</main>
+`;

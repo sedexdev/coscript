@@ -1,0 +1,213 @@
+.profile-container {
+    margin-left: 300px;
+}
+
+.profile-box {
+    width: 70%;
+    margin: 0 auto 20px auto !important;
+}
+
+.input-container {
+    display: -webkit-box;
+    display: flex;
+}
+
+.profile-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.account-box {
+    display: block;
+    color: #111;
+    border-top: none;
+    border-right: none;
+    border-bottom: 4px solid #444;
+    border-left: none;
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+.users-email {
+    display: block;
+    padding-top: 8px;
+}
+
+.edit-icon-btn {
+    background: none;
+    border: none;
+    height: 40px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.edit-icon-btn:focus {
+    outline: 0;
+}
+
+.edit-input-icon {
+    height: auto;
+    width: 20px;
+}
+
+.edit-input-icon:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: 0.2s, -webkit-transform;
+    transition: 0.2s, -webkit-transform;
+    transition: transform, 0.2s;
+    transition: transform, 0.2s, -webkit-transform;
+}
+
+.save-btn-container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#password-h2 {
+    display: block;
+    margin-bottom: 0 !important;
+}
+
+.pw-button-container {
+    text-align: center;
+    margin: 0 auto 15px auto;
+}
+
+.pw-hide-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.pw-hide-btn:hover {
+    color: var(--button-green, #4af030);
+}
+
+.pw-hide-btn:focus {
+    outline: 0;
+}
+
+.prompt-text {
+    display: block;
+    padding-top: 15px;
+}
+
+.pw-code-failed {
+    display: block;
+    margin-top: 10px;
+    color: red;
+}
+
+.pw-code-container {
+    display: -webkit-box;
+    display: flex;
+    margin: 10px 0;
+}
+
+#new-pw,
+#new-pw-confirm {
+    padding-bottom: 10px;
+}
+
+.pw-code {
+    display: -webkit-box;
+    display: flex;
+}
+
+.pw-code-input {
+    padding-left: 10px;
+}
+
+.pw-code-input:focus {
+    outline: 0;
+}
+
+.verify-pw-code-spinner {
+    margin-left: 20px;
+    height: 40px;
+    width: 40px;
+}
+
+#profile-public,
+#receive-email-pos {
+    margin-bottom: 15px;
+}
+
+.delete-account-container {
+    border: 2px solid red;
+    width: 70%;
+    margin: 20px auto 50px auto;
+    padding: 0 15px 15px 15px;
+}
+
+.delete-heading {
+    display: block;
+    color: red;
+    margin-top: 10px;
+}
+
+.delete-disclaimer {
+    display: block;
+    font-size: 0.9rem;
+    text-align: justify;
+    padding: 5px 0;
+}
+
+.account-edit-container {
+    position: fixed;
+    margin: 0 auto;
+    padding-right: 10px;
+    top: 30%;
+    right: 0;
+    left: 0;
+    width: 50%;
+    background: rgb(235, 235, 235);
+    box-shadow: 5px 5px 10px rgb(177, 177, 177);
+}
+
+.email-edit-input {
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.profile-edit-heading {
+    display: block;
+    padding: 20px 0 0 30px;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.profile-edit-msg {
+    display: block;
+    padding: 20px 0 0 30px;
+    font-size: 1rem;
+}
+
+.delete-error {
+    color: red;
+    padding: 0 0 10px 30px;
+    font-size: 1rem;
+}
+
+@media (max-width: 500px) {
+    .profile-container {
+        margin-left: 0;
+    }
+
+    .side-panel-container {
+        display: none;
+    }
+
+    .profile-visibility {
+        margin: 15px 0 15px 5px;
+    }
+
+    .account-edit-container {
+        width: 90%;
+    }
+}

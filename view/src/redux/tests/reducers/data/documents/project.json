@@ -1,0 +1,19 @@
+{
+    "projects": {
+        "user": "5e58667d902d38559c802b13",
+        "userData": {
+            "name": "Test Name",
+            "avatar": "http://www.gravatar.com/avatar/123456789"
+        },
+        "title": "Test Title",
+        "author": "Test Name",
+        "genres": "Test Genres",
+        "description": "Test description",
+        "coverImg": [],
+        "collaborators": [],
+        "published": false,
+        "projectId": "5e58667d902d38559c802b15",
+        "content": "Test content",
+        "url": "/projects/5e58667d902d38559c802b15"
+    }
+}

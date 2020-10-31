@@ -1,0 +1,40 @@
+{
+    "messages": [
+        {
+            "chatRoom": "5e58667d902d38559c802b13",
+            "user": {
+                "userId": "5e58667d902d38559c802b14",
+                "name": "Test Name",
+                "avatar": "http://www.gravatar.com/avatar/123456789"
+            },
+            "content": "Test content"
+        },
+        {
+            "chatRoom": "5e58667d902d38559c802b14",
+            "user": {
+                "userId": "5e58667d902d38559c802b14",
+                "name": "Test Name",
+                "avatar": "http://www.gravatar.com/avatar/123456789"
+            },
+            "content": "Test content 2"
+        },
+        {
+            "chatRoom": "5e58667d902d38559c802b15",
+            "user": {
+                "userId": "5e58667d902d38559c802b14",
+                "name": "Test Name",
+                "avatar": "http://www.gravatar.com/avatar/123456789"
+            },
+            "content": "Test content 3"
+        },
+        {
+            "chatRoom": "5e58667d902d38559c802b16",
+            "user": {
+                "userId": "5e58667d902d38559c802b14",
+                "name": "Test Name",
+                "avatar": "http://www.gravatar.com/avatar/123456789"
+            },
+            "content": "Test content 4"
+        }
+    ]
+}

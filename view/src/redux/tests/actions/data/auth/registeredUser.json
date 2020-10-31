@@ -1,0 +1,23 @@
+{
+    "id": "87t28ygfif7egvwyuiev9ib3f4",
+    "avatar": "www.gravatar.com/avatar/123456789",
+    "name": "Test",
+    "username": "Test101",
+    "email": "user@email.com",
+    "profile": {
+        "buttonID": "username-radio",
+        "displayName": "Test",
+        " about": "",
+        "authors": [],
+        "books": [],
+        "userProjects": [],
+        "collaboratingProjects": [],
+        "messages": [],
+        "friends": [],
+        "blockedUsers": []
+    },
+    "isRegistered": true,
+    "isLoggedIn": true,
+    "authToken": "",
+    "passwordUpdated": false
+}

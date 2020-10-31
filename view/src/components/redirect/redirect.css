@@ -1,0 +1,15 @@
+.redirect-body {
+    color: #fff;
+    background-color: var(--background-color-mid, #444);
+    height: 100vh;
+}
+
+.redirect-container {
+    padding-top: 100px;
+}
+
+.ajax-spinner-container {
+    display: block;
+    margin: 60px auto 0 auto;
+    text-align: center;
+}

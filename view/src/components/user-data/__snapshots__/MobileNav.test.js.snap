@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MobileNav component renders correctly 1`] = `
+<nav
+  className="profile-mobile-nav"
+>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    <i
+      className="home-icon fas fa-home fa-3x"
+    />
+  </a>
+  <button
+    className="profile-dropdown-icon-link"
+    onClick={[Function]}
+  >
+    <img
+      alt="Burger menu icon"
+      className="profile-dropdown-icon"
+      src={
+        Object {
+          "ReactComponent": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          },
+          "__esModule": true,
+          "default": "menu.svg",
+        }
+      }
+    />
+  </button>
+  <div
+    className="dropdown-menu dropdown-content"
+    id="dropdown-nav"
+  >
+    <a
+      href="/profile"
+      onClick={[Function]}
+    >
+      <p
+        className="dropdown-link"
+      >
+        My Profile
+      </p>
+    </a>
+    <a
+      href="/messages"
+      onClick={[Function]}
+    >
+      <p
+        className="dropdown-link"
+      >
+        Messages
+      </p>
+    </a>
+    <a
+      href="/projects"
+      onClick={[Function]}
+    >
+      <p
+        className="dropdown-link"
+      >
+        Active Projects
+      </p>
+    </a>
+    <a
+      href="/publications"
+      onClick={[Function]}
+    >
+      <p
+        className="dropdown-link"
+      >
+        Publications
+      </p>
+    </a>
+    <a
+      href=" "
+      onClick={[Function]}
+    >
+      <p
+        className="dropdown-link"
+      >
+        Logout
+      </p>
+    </a>
+  </div>
+</nav>
+`;

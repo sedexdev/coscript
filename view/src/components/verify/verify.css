@@ -1,0 +1,99 @@
+.verify-body {
+    background: var(--background-color-mid, #444);
+    height: 100vh;
+}
+
+.verify-container {
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    padding: 10vh 0;
+}
+
+.coscript-h1 {
+    display: block;
+    font-family: "Dancing Script", cursive;
+    font-size: 3.6rem;
+    font-weight: 200;
+    text-align: center;
+    padding: 10px;
+}
+
+.verify-text {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.verify-email-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.verify-email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60%;
+    text-align: center;
+}
+
+.v-email {
+    height: 45px;
+    width: 100%;
+    padding: 0 0 0 10px;
+    border: none;
+}
+
+.v-email[placeholder="Email"] {
+    font-style: italic;
+}
+
+.verify-email:focus {
+    outline: 0;
+}
+
+.verification-error {
+    display: block;
+    color: red;
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.sending-credentials-email-spinner-container {
+    text-align: center;
+}
+
+.sending-credentials-email-spinner {
+    display: block;
+    margin: 20px auto;
+    height: auto;
+    width: 50px;
+}
+
+.code-sent-message {
+    display: block;
+    margin-top: 20px;
+}
+
+.home-link {
+    display: block;
+    width: 30%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--button-green, #4af030);
+    margin: 30px auto;
+}
+
+@media (max-width: 700px) {
+    .verify-email {
+        width: 90%;
+    }
+}

@@ -1,0 +1,297 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index component renders correctly 1`] = `
+<main>
+  <nav
+    className="navbar"
+  />
+  <section
+    className="cover"
+  >
+    <div
+      className="index-heading"
+    >
+      <h1>
+        CoScript
+      </h1>
+      <p>
+        Bringing writers together...
+      </p>
+      <a
+        className="down-arrow"
+        href="#dummy"
+      >
+        ↓
+      </a>
+      <div
+        id="dummy"
+      />
+    </div>
+  </section>
+  <section
+    className="services"
+  >
+    <div
+      className="services-container"
+    >
+      <div
+        className="service-box"
+      >
+        <div>
+          <h1>
+            -CONNECT-
+          </h1>
+        </div>
+        <div>
+          <img
+            alt="Users icon"
+            className="service-icon"
+            src={
+              Object {
+                "ReactComponent": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                },
+                "__esModule": true,
+                "default": "users.svg",
+              }
+            }
+          />
+        </div>
+        <div>
+          <p>
+            Search for people and projects and start networking with others to get your project off the ground
+          </p>
+        </div>
+      </div>
+      <div
+        className="service-box"
+      >
+        <div>
+          <h1>
+            -COLLABORATE-
+          </h1>
+        </div>
+        <div>
+          <img
+            alt="Book icon"
+            className="service-icon"
+            src={
+              Object {
+                "ReactComponent": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                },
+                "__esModule": true,
+                "default": "books.svg",
+              }
+            }
+          />
+        </div>
+        <div>
+          <p>
+            Create a workspace for your project with access to a rich text editor and start writing with your new found friends
+          </p>
+        </div>
+      </div>
+      <div
+        className="service-box"
+      >
+        <div>
+          <h1>
+            -PUBLISH-
+          </h1>
+        </div>
+        <div>
+          <img
+            alt="Publish icon"
+            className="service-icon"
+            src={
+              Object {
+                "ReactComponent": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                },
+                "__esModule": true,
+                "default": "archive.svg",
+              }
+            }
+          />
+        </div>
+        <div>
+          <p>
+            Upon completion, publish your final piece in the app to be read online and showcased for the world to see
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    className="home-page-about"
+  >
+    <div
+      className="about-container"
+    >
+      <div
+        className="about-text-box"
+      >
+        <h2
+          className="about-h2"
+        >
+          About CoScript
+        </h2>
+        <div
+          className="about-text"
+        >
+          <p
+            className="lead"
+          >
+            This application aims to serve the writing community, and anyone who is interested in writing, as a meeting place and useful tool for making collaboration on creative writing projects easier than ever before. As a person who has attempted to write a novel and several short stories, but never actually finished any of them, I can appreciate the demand for collaborative spaces that offer help when you need it.
+          </p>
+          <p>
+            The platform allows you to create your own projects and put them out to the community. Once your project is live, others can browse and request to to get involved with the project, the creator has total control over who can join. Credit is given to ALL contributors whose submissions were accepted by the project creator, once a project has been published.
+          </p>
+          <p>
+            All active projects are available from the 'Active Projects' page, just browse and find something that you're interested in and then message the creator with a little intro to request to be added to the project. If you've got an idea and are willing to make it a collaborative project then sign up today and start you're journey towards being a published author!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    className="carousel"
+  >
+    <div
+      className="carousel-container"
+    >
+      <div
+        className="tabs-container"
+      >
+        <div
+          className="active tab"
+        >
+          <button
+            className="tab-link"
+            id="projects-tab"
+            onClick={[Function]}
+          >
+            Projects
+          </button>
+        </div>
+        <div
+          className="tab"
+        >
+          <button
+            className="tab-link"
+            id="publications-tab"
+            onClick={[Function]}
+          >
+            Publications
+          </button>
+        </div>
+        <div
+          className="carousel-line"
+        />
+      </div>
+      <div
+        className="carousel-items"
+      >
+        <button
+          className="carousel-btn"
+          onClick={[Function]}
+          type="button"
+        >
+          ‹
+        </button>
+        <p>
+          Projects coming soon...
+        </p>
+        <button
+          className="carousel-btn"
+          onClick={[Function]}
+          type="button"
+        >
+          ›
+        </button>
+      </div>
+    </div>
+  </section>
+  <footer
+    className="footer"
+  >
+    <h2
+      className="footer-h2"
+    >
+      CoScript
+    </h2>
+    <div
+      className="footer-container"
+    >
+      <div
+        className="links-container socials"
+      >
+        <p>
+          Socials
+        </p>
+        <div
+          className="footer-links"
+        >
+          <a
+            href="https://github.com/AndrewMacmillan87/coscript"
+          >
+            GitHub
+          </a>
+          <a
+            href="/"
+          >
+            Twitter
+          </a>
+          <a
+            href="/"
+          >
+            Facebook
+          </a>
+        </div>
+      </div>
+      <div
+        className="links-container site-map"
+      >
+        <p>
+          Site Map
+        </p>
+      </div>
+      <div
+        className="links-container legals"
+      >
+        <p>
+          Legal
+        </p>
+        <div
+          className="footer-links"
+        >
+          <a
+            href="/terms"
+          >
+            Terms and Conditions
+          </a>
+          <a
+            href="/copyright"
+          >
+            Copyright Info
+          </a>
+          <a
+            href="/agreement"
+          >
+            Writers Agreements
+          </a>
+          <a
+            href="/"
+          >
+            Accreditation
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</main>
+`;

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Landing component renders correctly 1`] = `
+<main
+  className="project-landing-page"
+>
+  <nav
+    className="navbar"
+  />
+  <header
+    className="project-banner-container"
+  >
+    <div
+      className="banner-container"
+    >
+      <div
+        className="banner-details"
+      >
+        <h1
+          className="project-banner-heading"
+        >
+          Test Title
+        </h1>
+        <div
+          className="project-gravatar-container"
+        >
+          <div
+            className="project-gravatar"
+          >
+            <img
+              alt="User's Gravatar"
+              className="project-gravatar-img"
+              src="http://www.gravatar.com/avatar/123456789"
+            />
+            <button
+              className="users-name"
+              onClick={[Function]}
+            >
+              Test Name
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img
+      alt="Project cover"
+      className="project-cover-img"
+      src="sky-example.jpg"
+    />
+  </header>
+  <section
+    className="project-information-container"
+  >
+    <div
+      className="project-tab-bar"
+    >
+      <a
+        className="landing-page-tab"
+        href="/landing/projects/5e58667d902d38559c802b14"
+        onClick={[Function]}
+      >
+        Description
+      </a>
+      <p
+        className="tab-divider"
+      >
+        |
+      </p>
+      <a
+        className="landing-page-tab"
+        href="/landing/projects/5e58667d902d38559c802b14/contact"
+        onClick={[Function]}
+      >
+        Contact
+      </a>
+    </div>
+  </section>
+</main>
+`;

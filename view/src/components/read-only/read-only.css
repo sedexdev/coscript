@@ -1,0 +1,28 @@
+.read-only-main {
+    background: var(--editor-background, #d0cfce);
+    background-repeat: repeat-y;
+    width: 100%;
+    padding: 120px 0 60px 0;
+}
+
+.read-only-wrapper {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.read-only {
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 10px 10px 10px #999;
+    height: 1100px;
+    padding: 100px;
+}
+
+@media (max-width: 500px) {
+    .read-only {
+        width: 75%;
+        padding: 20px;
+    }
+}

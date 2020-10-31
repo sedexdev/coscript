@@ -1,0 +1,16 @@
+{
+    "collaboratorsArray": [
+        {
+            "avatar": "http://www.gravater.com/avatar/123456789",
+            "name": "Test Name",
+            "id": "5ea593b3001ebe324cdd84aa",
+            "isLoggedIn": true
+        },
+        {
+            "avatar": "http://www.gravater.com/avatar/123456789",
+            "name": "Test Name 2",
+            "id": "5ea6c070dc75233ae80577db",
+            "isLoggedIn": true
+        }
+    ]
+}

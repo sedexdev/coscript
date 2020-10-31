@@ -1,0 +1,9 @@
+.unauthorised-body {
+    color: #fff;
+    background-color: var(--background-color-mid, #444);
+    height: 100vh;
+}
+
+.unauthorised-container {
+    padding-top: 100px;
+}

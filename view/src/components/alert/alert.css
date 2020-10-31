@@ -1,0 +1,79 @@
+.alert,
+.login-alert,
+.account-alert,
+.update-alert,
+.contact-alert,
+.message-alert,
+.request-alert,
+.delete-alert {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+    margin: 5px auto;
+    opacity: 0.9;
+    background-color: var(--background-color-mid, #444);
+    color: #fff;
+}
+
+.alert {
+    width: 80%;
+}
+
+.login-alert {
+    margin-left: 0 !important;
+    width: 77%;
+}
+
+.account-alert {
+    margin: 15px auto 5px auto;
+    padding: 0.6rem 0 !important;
+    width: 100%;
+}
+
+.update-alert {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0.6rem 0 !important;
+}
+
+.contact-alert {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 0;
+    padding: 10px 10px 10px 5px !important;
+}
+
+.message-alert {
+    width: 100vw - 300px;
+    margin: auto;
+    padding: 10px 10px 10px 5px !important;
+}
+
+.request-alert {
+    position: fixed;
+    top: 70px;
+    width: 100vw;
+    margin: auto;
+    padding: 10px 10px 10px 5px !important;
+}
+
+.delete-alert {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    font-size: 1.3rem;
+    width: 30vw;
+    opacity: 1 !important;
+    margin: auto;
+    padding: 20px 20px 20px 15px !important;
+}
+
+.alert-danger {
+    background-color: var(--danger, #fb1515);
+    color: #fff;
+}
+
+.alert-success {
+    background-color: var(--button-green, #4af030);
+    color: #fff;
+}

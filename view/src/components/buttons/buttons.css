@@ -1,0 +1,108 @@
+.btn {
+    background-color: #fff;
+    color: #222;
+    height: 45px;
+    width: 110px;
+    padding: 5px;
+    margin: 15px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-text {
+    pointer-events: none;
+}
+
+.grn-btn {
+    background-color: var(--button-green, #4af030);
+    height: 45px;
+    width: 110px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.small-btn {
+    background-color: var(--button-green, #4af030);
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.square-btn {
+    background-color: var(--button-green, #4af030);
+    padding: 10px;
+    height: 45px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--background-color-dark, #000);
+    color: #fff;
+    -webkit-transition: background-color, color, 0.2s;
+    transition: background-color, color, 0.2s;
+}
+
+.panel-btn {
+    position: fixed;
+    background-color: var(--background-color-mid, #444);
+    color: #fff;
+    opacity: 0.8;
+    top: 50vh;
+    left: 0;
+    width: 40px;
+    height: 80px;
+    -webkit-transition: left, 0.1s ease-in-out;
+    transition: left, 0.1s ease-in-out;
+    z-index: 2;
+    cursor: pointer;
+    border: none;
+    border-bottom-right-radius: 80px;
+    border-top-right-radius: 80px;
+}
+
+.chat-btn {
+    position: fixed;
+    right: 40px;
+    top: 85vh;
+    height: 75px;
+    width: 75px;
+    background-color: var(--background-color-mid, #444);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.grn-btn:hover,
+.small-btn:hover,
+.square-btn:hover {
+    background-color: var(--button-green-hover, #43bb30);
+    -webkit-transition: background-color, 0.2s;
+    transition: background-color, 0.2s;
+}
+
+.panel-btn:hover,
+.chat-btn:hover {
+    color: var(--button-green, #4af030);
+    -webkit-transition: color, 0.1s;
+    transition: color, 0.1s;
+}
+
+.btn:focus,
+.grn-btn:focus,
+.small-btn:focus,
+.square-btn:focus,
+.panel-btn:focus,
+.chat-btn:focus {
+    outline: 0;
+}

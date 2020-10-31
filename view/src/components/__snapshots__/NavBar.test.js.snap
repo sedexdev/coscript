@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar component renders correctly 1`] = `
+<nav
+  className="navbar"
+>
+  <div
+    className="header"
+  >
+    <div
+      className="logo-container"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <p
+          className="logo"
+        >
+          CoScript
+        </p>
+      </a>
+    </div>
+    <div
+      className="nav-links"
+    >
+      <a
+        href="/projects"
+        onClick={[Function]}
+      >
+        Active Projects
+      </a>
+      <a
+        href="/publications"
+        onClick={[Function]}
+      >
+        Publications
+      </a>
+    </div>
+  </div>
+  <div
+    className="nav-btns"
+  >
+    <div>
+      <a
+        href="/register"
+        onClick={[Function]}
+      >
+        <button
+          className="btn"
+          type="button"
+        >
+          <span
+            className="btn-text"
+          >
+            <b>
+              Register
+            </b>
+          </span>
+        </button>
+      </a>
+    </div>
+    <div>
+      <a
+        href="/login"
+        onClick={[Function]}
+      >
+        <button
+          className="grn-btn"
+          type="button"
+        >
+          <span
+            className="btn-text"
+          >
+            <b>
+              Login
+            </b>
+          </span>
+        </button>
+      </a>
+    </div>
+  </div>
+  <button
+    className="dropdown-icon-link"
+    onClick={[Function]}
+  >
+    <img
+      alt="Burger menu icon"
+      className="dropdown-icon"
+      src={
+        Object {
+          "ReactComponent": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          },
+          "__esModule": true,
+          "default": "menu.svg",
+        }
+      }
+    />
+  </button>
+  <div
+    className="dropdown-menu dropdown-content"
+    id="dropdown-nav"
+  >
+    <a
+      href="/register"
+      onClick={[Function]}
+    >
+      <p
+        className="dropdown-link"
+      >
+        Register
+      </p>
+    </a>
+    <a
+      href="/login"
+      onClick={[Function]}
+    >
+      <p
+        className="dropdown-link"
+      >
+        Login
+      </p>
+    </a>
+    <a
+      href="/projects"
+      onClick={[Function]}
+    >
+      <p
+        className="dropdown-link"
+      >
+        Active Projects
+      </p>
+    </a>
+    <a
+      href="/publications"
+      onClick={[Function]}
+    >
+      <p
+        className="dropdown-link"
+      >
+        Publications
+      </p>
+    </a>
+  </div>
+</nav>
+`;
