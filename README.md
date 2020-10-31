@@ -69,6 +69,8 @@ To learn more about how sessions are handled using the <code>express-sessions</c
 
 <h3><b>Email Server</b></h3>
 
+The application uses emails to verify a users email address when they sign up, change passwords, and recover login information. To implement these features I have used the <code>nodemailer</code> npm package.
+
 If you intend to use Google's SMTP server (configurable through your GMail Settings) to send emails, then add this to the end of the <code>default.json</code> file:
 
 <pre>
