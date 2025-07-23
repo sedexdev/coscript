@@ -6,6 +6,7 @@ const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
 const uuid = require("uuid");
 const config = require("config");
+const mongoSessionPassword = config.get("database.mongoSessionPassword");
 const sessionLife = config.get("session.sessionLife");
 const sessionName = config.get("session.sessionName");
 const sessionKey = config.get("session.sessionKey");
@@ -39,8 +40,9 @@ connectMongo();
  *                          the model for sessions that are
  *                          stored in the database
  */
+const mongoSessionURI = `mongodb://session-admin:${mongoSessionPassword}@localhost:27018/mongodb-session?authSource=admin`;
 const mdbStore = new MongoDBStore({
-    uri: config.get("database.mongoSessionURI"),
+    uri: mongoSessionURI,
     mongooseConnection: mongoose.connection,
     collection: "sessions",
     ttl: sessionLife / 1000,

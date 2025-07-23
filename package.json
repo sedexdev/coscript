@@ -1,6 +1,6 @@
 {
     "name": "controller",
-    "version": "3.0.1",
+    "version": "3.0.0",
     "description": "server side implementation for the CoScript controller",
     "main": "server.js",
     "jest": {

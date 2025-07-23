@@ -1,3 +1,9 @@
+# mongo-data/config
+.env.mongo-data
+.env.mongo-session
+mongo-data/
+config/
+
 # node_modules
 node_modules
 /model/node_modules

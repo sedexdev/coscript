@@ -1,0 +1,30 @@
+services:
+    mongodb-data:
+        image: mongo:6
+        container_name: mongodb-data
+        restart: unless-stopped
+        env_file:
+            - ./.env.mongo-data
+        ports:
+            - "27017:27017"
+        volumes:
+            - ./mongo-data:/data/mongodb-data
+        networks:
+            - coscript-net
+
+    mongodb-session:
+        image: mongo:6
+        container_name: mongodb-session
+        restart: unless-stopped
+        env_file:
+            - ./.env.mongo-session
+        ports:
+            - "27018:27017"
+        volumes:
+            - ./mongo-data:/data/mongodb-session
+        networks:
+            - coscript-net
+
+networks:
+    coscript-net:
+        driver: bridge

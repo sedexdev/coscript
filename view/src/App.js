@@ -52,24 +52,24 @@ const App = ({ user, userProfile, projectData, fileData }) => {
     return (
         <Provider store={reduxStore}>
             <PersistGate persistor={persistor}>
-                <div className='App'>
+                <div className="App">
                     <Router>
                         <Switch>
-                            <Route exact path='/' component={Index} />
-                            <Route exact path='/login' component={Login} />
+                            <Route exact path="/" component={Index} />
+                            <Route exact path="/login" component={Login} />
                             <Route
                                 exact
-                                path='/register'
+                                path="/register"
                                 component={Register}
                             />
                             <Route
                                 exact
-                                path='/projects'
+                                path="/projects"
                                 component={Projects}
                             />
                             <Route
                                 exact
-                                path='/publications'
+                                path="/publications"
                                 component={Publications}
                             />
                             <Route
@@ -79,27 +79,27 @@ const App = ({ user, userProfile, projectData, fileData }) => {
                             />
                             <Route
                                 exact
-                                path='/redirect'
+                                path="/redirect"
                                 isLoggedIn={isLoggedIn}
                                 component={RedirectHome}
                             />
                             <Route
                                 exact
-                                path='/unauthorised'
+                                path="/unauthorised"
                                 component={Unauthorised}
                             />
-                            <Route exact path='/verify' component={Verify} />
+                            <Route exact path="/verify" component={Verify} />
                             <Route
                                 exact
-                                path='/copyright'
+                                path="/copyright"
                                 component={Copyright}
                             />
                             <Route
                                 exact
-                                path='/agreement'
+                                path="/agreement"
                                 component={Agreement}
                             />
-                            <Route exact path='/terms' component={Terms} />
+                            <Route exact path="/terms" component={Terms} />
                             <Private
                                 exact
                                 path={`/editor${filePath}`}
@@ -114,7 +114,7 @@ const App = ({ user, userProfile, projectData, fileData }) => {
                             />
                             <Private
                                 exact
-                                path='/editor'
+                                path="/editor"
                                 isLoggedIn={isLoggedIn}
                                 component={TextEditor}
                             />
@@ -126,13 +126,13 @@ const App = ({ user, userProfile, projectData, fileData }) => {
                             />
                             <Private
                                 exact
-                                path='/messages'
+                                path="/messages"
                                 isLoggedIn={isLoggedIn}
                                 component={Messages}
                             />
                             <Private
                                 exact
-                                path='/profile'
+                                path="/profile"
                                 isLoggedIn={isLoggedIn}
                                 component={Profile}
                             />
@@ -142,14 +142,14 @@ const App = ({ user, userProfile, projectData, fileData }) => {
                             />
                             <Private
                                 exact
-                                path='/account'
+                                path="/account"
                                 isLoggedIn={isLoggedIn}
                                 component={Account}
                             />
                             {/* Make this endpoint inaccessible to logged in users by direct url */}
                             <Protected
                                 exact
-                                path='/update-credentials'
+                                path="/update-credentials"
                                 user={user}
                                 component={ChangePassword}
                             />
@@ -200,7 +200,7 @@ const Protected = ({ user, component: Component, ...rest }) => {
                         />
                     );
                 } else {
-                    return <Redirect to='/unauthorised' />;
+                    return <Redirect to="/unauthorised" />;
                 }
             }}
         />
