@@ -1,10 +1,10 @@
-<h1>CoScript</h1> 
+<h1>CoScript</h1>
 
 A collaborative creative writing platform for writers to meet, discuss, create, and publish their work.
 
 CoScript is a JavaScript application that implements the MERN technology stack. It seeks to introduce writers to each other and provide a dedicated platform and workspace that is specifically for creative writing.
 
-Technology stack: 
+Technology stack:
 
 <ul>
   <li>The React library (built using create-react-app) for scalability and component management</li>
