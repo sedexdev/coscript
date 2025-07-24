@@ -7,8 +7,8 @@ const mongoURI = `mongodb://data-admin:${mongoDataPassword}@localhost:27017/mong
 const connectMongo = async () => {
     try {
         await mongoose.connect(mongoURI, {
-            // useNewUrlParser: true,
-            // useUnifiedTopology: true,
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
             // useCreateIndex: true,
             // useFindAndModify: false,
         });
