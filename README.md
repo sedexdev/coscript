@@ -1,19 +1,188 @@
-<h1>CoScript</h1>
+# 📘 CoScript
 
 A collaborative creative writing platform for writers to meet, discuss, create, and publish their work.
 
-CoScript is a JavaScript application that implements the MERN technology stack. It seeks to introduce writers to each other and provide a dedicated platform and workspace that is specifically for creative writing.
+CoScript was my 3rd year final project built on the MERN technology stack. It sought to introduce writers
+to each other and provide a dedicated platform and workspace specifically for creative writing.
 
 Technology stack:
 
-<ul>
-  <li>The React library (built using create-react-app) for scalability and component management</li>
-  <li>ExpressJS to run a backend server offering a REST API</li>
-  <li>NodeJS and npm for backend services and package dependencies</li>
-  <li>User and resource creation and management system using MongoDB</li> 
-  <li>Schema-based application data modelling solution using Mongoose</li>
-  <li>Jest and Enzyme testing frameworks for unit and component testing</li>
-</ul>
+-   The React library (built using create-react-app) for scalability and component management
+-   ExpressJS to run a backend server offering a REST API
+-   NodeJS and npm for backend services and package dependencies
+-   NoSQL user and session databases on MongoDB
+-   Schema-based application data modelling solution using Mongoose
+-   Jest and Enzyme testing frameworks for unit, integration, and component testing
+
+## ✨ Features
+
+-   ✅ Secure registration and login
+-   ✅ Email alerts
+-   ✅ Custom WYSIWYG editor for rich text
+-   ✅ Content authoring & publishing
+-   ✅ Social network platform
+-   ✅ Collaborative authoring
+-   ✅ Real-time in-editor chat
+-   ✅ Secure dedicated file system per-user / per-project
+-   ✅ Profile customisation
+-   ✅ Private DM inbox
+-   ✅ Legal guidance
+
+## 📦 Installation
+
+### Prerequisites
+
+```bash
+Node.js >= 18
+npm
+Docker
+```
+
+### Local Setup
+
+Get the code
+
+```bash
+# Clone the repository
+git clone https://github.com/sedexdev/coscript.git
+cd coscript
+```
+
+After following the _Configuration_ steps below run:
+
+```bash
+npm run dev
+```
+
+This starts the dev server & opens the client in your default browser.
+
+## ⚙️ Configuration
+
+Create a directory called `config` in the project root then create a file called `default.json` and add the following:
+
+```json
+{
+    "database": {
+        "mongoDataPassword": "YOUR_MONGO_DATA_PASSWORD",
+        "mongoSessionPassword": "YOUR_MONGO_SESSION_PASSWORD"
+    },
+    "encryption": {
+        "msgEncryptionKey": "A_SUITABLE_ENCRYPTION_KEY"
+    },
+    "tokens": {
+        "jwtCode": "A_SUITABLE_SECRET_KEY_FOR_SIGNING_A_JWT",
+        "jwtCode2": "A_SUITABLE_SECRET_KEY_FOR_SIGNING_A_JWT"
+    },
+    "session": {
+        "sessionName": "YOUR_CHOSEN_SESSION_NAME",
+        "sessionLife": 43200000,
+        "sessionKey": "A_SUITABLE_SESSION_KEY"
+    },
+    "email": {
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "auth": {
+            "user": "YOUR_GMAIL_ADDRESS",
+            "pass": "YOUR_GOOGLE_APP_PASSWORD"
+        }
+    }
+}
+```
+
+> MongoDB instance credentials
+
+Create 2 more files in the root: `.env.mongo-data` & `.env.mongo-session`and add the following:
+
+```env
+# .env.mongo-data
+MONGO_INITDB_ROOT_USERNAME=data-admin
+MONGO_INITDB_ROOT_PASSWORD=YOUR_MONGO_DATA_PASSWORD
+MONGO_INITDB_DATABASE=mongodb-data
+
+# .env.mongo-session
+MONGO_INITDB_ROOT_USERNAME=session-admin
+MONGO_INITDB_ROOT_PASSWORD=YOUR_MONGO_SESSION_PASSWORD
+MONGO_INITDB_DATABASE=mongodb-session
+```
+
+Finally, create a directory called `mongo-data` in the root for the Docker Compose volumes:
+
+```bash
+mkdir mongo-data
+```
+
+> MongoDB containers
+
+```bash
+# Start the containers
+sudo docker compose up -d
+
+# Stop the containers
+sudo docker compose down
+
+# Stop the containers and destroy database
+sudo docker compose down -v
+```
+
+> Inspect the MongoDB database from mongosh
+
+```bash
+# mongo-data instance
+sudo docker container exec -it mongodb-data mongosh "mongodb://data-admin:YOUR_MONGO_DATA_PASSWORD@localhost:27017/mongodb-data?authSource=admin"
+
+# mongo-session instance
+sudo docker container exec -it mongodb-session mongosh "mongodb://session-admin:YOUR_MONGO_DATA_PASSWORD@localhost:27018/mongodb-session?authSource=admin"
+```
+
+## 📂 Project Structure
+
+```
+coscript/
+│
+├── src/                # Source files
+├── tests/              # Unit and integration tests
+├── docs/               # Documentation
+├── .github/            # GitHub workflows and issue templates
+├── .env.example        # Sample environment config
+├── Dockerfile
+└── README.md
+```
+
+## 🧪 Running Tests
+
+```bash
+# Example with Jest or Pytest
+npm test
+# or
+pytest
+```
+
+## 📄 Documentation
+
+-   [API Reference](docs/api.md)
+-   [User Guide](docs/user-guide.md)
+-   [Contributing Guide](CONTRIBUTING.md)
+
+## 🙌 Contributing
+
+Contributions are welcome! Please follow the [contributing guidelines](CONTRIBUTING.md) and check for open [issues](https://github.com/sedexdev/coscript/issues).
+
+## 🐛 Reporting Issues
+
+Found a bug or need a feature? Open an issue [here](https://github.com/sedexdev/coscript/issues).
+
+## 🧑‍💻 Authors
+
+-   **Andrew Macmillan** – [@sedexdev](https://github.com/sedexdev)
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📣 Acknowledgements
+
+-   [Tool/Library Name](https://link-to-tool.com)
+-   Inspiration from [repo-name](https://github.com/user/repo)
 
 <h2><b>Getting started</b></h2>
 
