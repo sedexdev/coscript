@@ -1,9 +1,12 @@
 ```
                          !=== Archive Status ===!
 
-This project has been archived and will receive no further updates beyond those I have included recently to get the project actually running and documented. There is no guarantee the steps below will work in future.
+This project has been archived and will receive no further updates beyond
+those I have included recently to get the project actually running and
+documented. There is no guarantee the steps below will work in future.
 
-The use of 'NODE_OPTIONS=--openssl-legacy-provider' is to get the app running only. This is insecure and not suitable for anything beyond test/dev.
+The use of 'NODE_OPTIONS=--openssl-legacy-provider' is to get the app running
+only. This is insecure and not suitable for anything beyond test/dev.
 
 From coscript/package.json:
 
