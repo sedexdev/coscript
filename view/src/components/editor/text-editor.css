@@ -57,8 +57,19 @@
 }
 
 .colour-icon {
-    margin-left: 5px;
-    padding-top: 13px;
+    display: flex;
+    align-items: center;
+    width: 25px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.icon-img {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: auto;
+    margin: auto;
 }
 
 .colourBtn {

@@ -5,7 +5,7 @@ import NavBar from "../NavBar";
 import FilePanel from "./FilePanel";
 import ChatBot from "./ChatBot";
 
-import { getEditorFunctions, classes, titles, icons, fonts } from "./util/data";
+import { getEditorFunctions, classes, icons, fonts } from "./util/data";
 import { playSoundEffect } from "../../redux/auxiliary/typing-sound-effect";
 
 // Redux
@@ -33,7 +33,6 @@ export class TextEditor extends React.Component {
             revealFolder: false,
             revealChatBot: false,
             classes: classes,
-            titles: titles,
             icons: icons,
             fonts: fonts,
             revealPublish: false,
@@ -530,7 +529,6 @@ export class TextEditor extends React.Component {
             revealPublish,
             revealChatBot,
             classes,
-            titles,
             icons,
             fonts,
             folders,
@@ -542,6 +540,9 @@ export class TextEditor extends React.Component {
         } = this.state;
 
         const { user, projectData, collaboratorsArray } = this.props;
+
+        const paletteIcon = require("../../../src/img/icons/palette.svg");
+        const highlightIcon = require("../../../src/img/icons/highlighter.svg");
 
         return (
             <Fragment>
@@ -585,12 +586,12 @@ export class TextEditor extends React.Component {
                         setMessageText={this.setMessageText}
                     />
                 )}
-                <main className='text-editor-main'>
-                    <div className='text-editor-ui-container'>
-                        <div className='editor-toolbar'>
-                            <div className='font-menus'>
+                <main className="text-editor-main">
+                    <div className="text-editor-ui-container">
+                        <div className="editor-toolbar">
+                            <div className="font-menus">
                                 <select
-                                    className='font-menu'
+                                    className="font-menu"
                                     onChange={(e) =>
                                         textEditor.execCommand(
                                             "FontName",
@@ -598,7 +599,8 @@ export class TextEditor extends React.Component {
                                             e.target.value
                                         )
                                     }
-                                    ref={this.fontSelect}>
+                                    ref={this.fontSelect}
+                                >
                                     {fonts.map((font, i) => {
                                         return (
                                             <option value={fonts[i]} key={i}>
@@ -608,14 +610,15 @@ export class TextEditor extends React.Component {
                                     })}
                                 </select>
                                 <select
-                                    className='font-menu'
+                                    className="font-menu"
                                     onChange={(e) =>
                                         textEditor.execCommand(
                                             "FontSize",
                                             false,
                                             e.target.value
                                         )
-                                    }>
+                                    }
+                                >
                                     {[...Array(8).keys()].map((size) => {
                                         return (
                                             <option value={size} key={size}>
@@ -625,12 +628,16 @@ export class TextEditor extends React.Component {
                                     })}
                                 </select>
                             </div>
-                            <i className='fas fa-palette colour-icon'></i>
+                            <img
+                                className="colour-icon"
+                                src={`${paletteIcon}`}
+                                alt="Palette icon"
+                            />
                             <input
-                                type='color'
-                                id='font-colour'
-                                className='colourBtn'
-                                title='Change Font Colour'
+                                type="color"
+                                id="font-colour"
+                                className="colourBtn"
+                                title="Change Font Colour"
                                 onChange={(e) =>
                                     textEditor.execCommand(
                                         "ForeColor",
@@ -639,11 +646,15 @@ export class TextEditor extends React.Component {
                                     )
                                 }
                             />
-                            <i className='fas fa-highlighter colour-icon'></i>
+                            <img
+                                className="colour-icon"
+                                src={`${highlightIcon}`}
+                                alt="Highlighter icon"
+                            />
                             <input
-                                type='color'
-                                className='colourBtn'
-                                title='Highlight'
+                                type="color"
+                                className="colourBtn"
+                                title="Highlight"
                                 onChange={(e) =>
                                     textEditor.execCommand(
                                         "BackColor",
@@ -656,26 +667,33 @@ export class TextEditor extends React.Component {
                                 return (
                                     <button
                                         className={el}
-                                        title={titles[i]}
+                                        title={icons[i].title}
                                         key={i}
                                         onClick={
                                             getEditorFunctions(textEditor)[el]
-                                        }>
-                                        <i className={`fas ${icons[i]}`}></i>
+                                        }
+                                    >
+                                        {/* <i className={`fas ${icons[i]}`}></i> */}
+                                        <img
+                                            className="icon-img"
+                                            src={`${icons[i].icon}`}
+                                            alt={`${icons[i].title} icon`}
+                                        />
                                     </button>
                                 );
                             })}
                         </div>
                     </div>
 
-                    <div className='text-editor-wrapper'>
+                    <div className="text-editor-wrapper">
                         <iframe
-                            className='text-editor'
-                            id='text-editor'
-                            name='text-editor'
-                            frameBorder='0'
-                            title='Rich editor'
-                            ref={this.setTextEditor}></iframe>
+                            className="text-editor"
+                            id="text-editor"
+                            name="text-editor"
+                            frameBorder="0"
+                            title="Rich editor"
+                            ref={this.setTextEditor}
+                        ></iframe>
                     </div>
                 </main>
             </Fragment>

@@ -20,6 +20,7 @@ node_modules
 /view/build
 
 # misc
+.vscode/
 .DS_Store
 view/.env
 view/.env.local

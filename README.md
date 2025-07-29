@@ -1,11 +1,27 @@
+```
+                         !=== Archive Status ===!
+
+This project has been archived and will receive no further updates beyond those I have included recently to get the project actually running and documented. There is no guarantee the steps below will work in future.
+
+The use of 'NODE_OPTIONS=--openssl-legacy-provider' is to get the app running only. This is insecure and not suitable for anything beyond test/dev.
+
+From coscript/package.json:
+
+"scripts": {
+    ...,
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider ...",
+    ...
+},
+```
+
 # 📘 CoScript
 
 A collaborative creative writing platform for writers to meet, discuss, create, and publish their work.
 
-CoScript was my 3rd year final project built on the MERN technology stack. It sought to introduce writers
+CoScript was my **_3rd year final project_** built on the MERN technology stack. It sought to introduce writers
 to each other and provide a dedicated platform and workspace specifically for creative writing.
 
-Technology stack:
+Tooling:
 
 -   The React library (built using create-react-app) for scalability and component management
 -   ExpressJS to run a backend server offering a REST API
@@ -33,14 +49,15 @@ Technology stack:
 ### Prerequisites
 
 ```bash
-Node.js >= 18
+Node.js >= 17
 npm
 Docker
+Docker Compose
 ```
 
 ### Local Setup
 
-Get the code
+Get the code:
 
 ```bash
 # Clone the repository
@@ -48,13 +65,21 @@ git clone https://github.com/sedexdev/coscript.git
 cd coscript
 ```
 
-After following the _Configuration_ steps below run:
+Install dependencies:
 
 ```bash
-npm run dev
-```
+# From the root - coscript/
+npm install
 
-This starts the dev server & opens the client in your default browser.
+# From coscript/view
+npm install
+
+# From coscript/model
+npm install
+
+# After each you may consider running audit for some extra security
+npm audit fix
+```
 
 ## ⚙️ Configuration
 
@@ -88,6 +113,24 @@ Create a directory called `config` in the project root then create a file called
     }
 }
 ```
+
+> Emails
+
+The application relies on emails to verify users on sign-up, change passwords, and recover login information. To implement these features I have used the `nodemailer` npm package.
+
+I have used an [App Password](https://support.google.com/accounts/answer/185833?hl=en) provided by Google. This is a secret that can be used to authenticate an application with Google services. Generate a password and add it to the end of the `default.json` file:
+
+```
+"email": {
+    ...
+    "auth": {
+        "user": "YOUR_GMAIL_ADDRESS",
+        "pass": "YOUR_GOOGLE_APP_PASSWORD"
+    }
+}
+```
+
+_If you are using another email vendor, or your own SMTP server, then swap the details under `"auth"` with credentials appropriate to your service._
 
 > MongoDB instance credentials
 
@@ -134,143 +177,49 @@ sudo docker container exec -it mongodb-data mongosh "mongodb://data-admin:YOUR_M
 sudo docker container exec -it mongodb-session mongosh "mongodb://session-admin:YOUR_MONGO_DATA_PASSWORD@localhost:27018/mongodb-session?authSource=admin"
 ```
 
+### Run the development server
+
+After following the **_Configuration_** steps above run:
+
+```bash
+npm run dev
+```
+
+This starts the dev server & opens the client in your default browser.
+
 ## 📂 Project Structure
 
 ```
 coscript/
 │
-├── src/                # Source files
-├── tests/              # Unit and integration tests
-├── docs/               # Documentation
-├── .github/            # GitHub workflows and issue templates
-├── .env.example        # Sample environment config
-├── Dockerfile
-└── README.md
+├── middleware/             # API middleware
+├── model/                  # Database connection & schemas
+├── routes/                 # API backend
+├── tests/                  # Test data
+├── utils/                  # Session utility functions
+├── view/                   # React frontend
+├── .gitignore              # Git ignore file
+├── app.js                  # API server configuration
+├── docker-compose.yml      # MOngoDB container config
+├── package.json            # Root level dependencies
+├── README.md               # This README.md file
+└── server.js               # Express server configuration
 ```
 
 ## 🧪 Running Tests
 
 ```bash
-# Example with Jest or Pytest
-npm test
-# or
-pytest
+# npm test scripts exist in the following directories
+coscript/
+coscript/model
+coscript/view
+
+# To run the tests use
+npm run test
 ```
 
-## 📄 Documentation
-
--   [API Reference](docs/api.md)
--   [User Guide](docs/user-guide.md)
--   [Contributing Guide](CONTRIBUTING.md)
-
-## 🙌 Contributing
-
-Contributions are welcome! Please follow the [contributing guidelines](CONTRIBUTING.md) and check for open [issues](https://github.com/sedexdev/coscript/issues).
-
-## 🐛 Reporting Issues
-
-Found a bug or need a feature? Open an issue [here](https://github.com/sedexdev/coscript/issues).
+**_Disclaimer_**: As this project has been archived there has been no work done to ensure tests pass since updating this repos documentation.
 
 ## 🧑‍💻 Authors
 
 -   **Andrew Macmillan** – [@sedexdev](https://github.com/sedexdev)
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📣 Acknowledgements
-
--   [Tool/Library Name](https://link-to-tool.com)
--   Inspiration from [repo-name](https://github.com/user/repo)
-
-<h2><b>Getting started</b></h2>
-
-<h3><b>Pre-requisites</b></h3>
-
-Start off by installing the application's dependencies. In the root directory run:
-
-<code>npm install</code>
-
-Once this completes, create a directory called <code>config</code> in the root directory.
-
-**Note** To run this application you will need to create a few things. Since this application is open for anyone to modify and play around with, it makes sense that there are no database configurations, encryption keys, email credentials, or personal information exposed on GitHub.
-
-You will need to:
-
-<ul>
-  <li>have <code>Node.js and npm</code> installed</li>
-  <li>create 2 new MongoDB database instances on https://www.mongodb.com/ (free clusters are available). One of these is for user and resource management and the other is for user session data</li>
-  <li>have some way of sending emails. I am using Google's SMTP server</li>
-  <li>create a configuration file called <code>default.json</code> for data needed to compile the application</li>
-</ul>
-
-<h3><b>Configuration</b></h3>
-
-<code>cd</code> into the <code>config</code> folder and create a file called <code>default.json</code> and add the following configuration data:
-
-<pre>
-  <code>
-    {
-        "database": {
-            "mongoURI": [YOUR_MAIN_MONGODB_URI],
-            "mongoSessionURI": [YOUR_SESSION_MONGODB_URI]
-        },
-        "encryption": {
-            "msgEncryptionKey": [A_SUITABLE_ENCRYPTION_KEY_FOR_ENCRYPTING_STRING_DATA]
-        },
-        "tokens": {
-            "jwtCode": [A_SUITABLE_SECRET_KEY_FOR_SIGNING_A_JWT],
-            "jwtCode2": [A_SUITABLE_SECRET_KEY_FOR_SIGNING_A_JWT]
-        },
-        "session": {
-            "sessionName": [YOUR_CHOSEN_SESSION_NAME],
-            "sessionLife": [YOUR_CHOSEN_SESSION_LIFE],
-            "sessionKey": [A_SUITABLE_SESSION_KEY]
-        },
-    }
-  </code>
-</pre>
-
-To learn more about JSON Web Tokens (JWTs) and their purpose visit: https://jwt.io/
-
-To learn more about how sessions are handled using the <code>express-sessions</code> package visit: https://www.npmjs.com/package/express-session
-
-<h3><b>Email Server</b></h3>
-
-The application uses emails to verify a users email address when they sign up, change passwords, and recover login information. To implement these features I have used the <code>nodemailer</code> npm package.
-
-If you intend to use Google's SMTP server (configurable through your GMail Settings) to send emails, then add this to the end of the <code>default.json</code> file:
-
-<pre>
-  <code>
-    "email": {
-        "host": "smtp.gmail.com",
-        "port": 587,
-        "auth": {
-            "user": "[YOUR_GMAIL_ADDRESS]",
-            "pass": "[YOUR_GMAIL_PASSWORD]"
-        }
-    }
-  </code>
-</pre>
-
-If you are using another vendors, or your own, SMTP server then swap the details under <code>"email"</code> for the details appropriate to your service.
-
-**Note** If using GMail, you will need to <a href='https://support.google.com/accounts/answer/6010255?hl=en' target='_blank'>Allow Less Secure Apps through your GMail Account</a>. You will also need to enable IMAP in your GMail settings. Other providers may have other requirements, refer to their documentation for advice.
-
-The application should now be ready to run in development mode.
-
-<h3><b>Run the development server</b></h3>
-
-Finally, return to the root directory and run:
-
-<code>npm run dev</code>
-
-<h3><b>Tests</b></h3>
-
-Tests can be run from <code>root</code>, <code>view</code> and <code>model</code> directories:
-
-<code>npm run test</code>
-
-**Note** running <code>npm run test</code> from <code>root</code> will cause all tests in <code>view</code> to fail because the frontend uses <code>react-scripts test</code> which has its own test-runner configuration
