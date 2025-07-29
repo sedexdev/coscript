@@ -1,5 +1,5 @@
 ```
-                         !=== Archive Status ===!
+!=== Archive Status ===!
 
 This project has been archived and will receive no further updates beyond
 those I have included recently to get the project actually running and
