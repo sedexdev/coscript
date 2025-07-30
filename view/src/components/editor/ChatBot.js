@@ -1,5 +1,9 @@
 import React, { useEffect, useRef } from "react";
 
+// icons
+import checkCircleIcon from "../../img/icons/check-circle.svg";
+import commentIcon from "../../img/icons/comments.svg";
+
 // Redux
 import { connect } from "react-redux";
 import { getMessages, sendMessage } from "../../redux/actions/chat";
@@ -88,25 +92,25 @@ export const ChatBot = ({
     };
 
     return (
-        <aside className='chat-bot-container'>
+        <aside className="chat-bot-container">
             <div
-                className={
-                    revealChatBot ? "chat-box display-chat" : "chat-box"
-                }>
-                <div className='chat-window'>
+                className={revealChatBot ? "chat-box display-chat" : "chat-box"}
+            >
+                <div className="chat-window">
                     {messages && messages.length ? (
                         filterChat().map((message) => {
                             return (
                                 <div
-                                    className='chat-message-container'
-                                    key={message._id}>
-                                    <div className='chat-message-user-container'>
+                                    className="chat-message-container"
+                                    key={message._id}
+                                >
+                                    <div className="chat-message-user-container">
                                         <img
-                                            className='chat-user-avatar'
+                                            className="chat-user-avatar"
                                             src={message.user.avatar}
-                                            alt='user avatar'
+                                            alt="user avatar"
                                         />
-                                        <p className='chat-user-name'>
+                                        <p className="chat-user-name">
                                             {message.user.name}
                                         </p>
                                     </div>
@@ -115,7 +119,7 @@ export const ChatBot = ({
                             );
                         })
                     ) : (
-                        <p className='chat-welcome-message'>
+                        <p className="chat-welcome-message">
                             You can use this chat service to bounce ideas
                             around, collaborate with your CoScripters and get to
                             know each other
@@ -123,25 +127,35 @@ export const ChatBot = ({
                     )}
                 </div>
                 <form
-                    className='editor-chat-form'
-                    onSubmit={(e) => onClickSend(e)}>
-                    <div className='message-input-container'>
+                    className="editor-chat-form"
+                    onSubmit={(e) => onClickSend(e)}
+                >
+                    <div className="message-input-container">
                         <input
-                            className='message-input'
-                            type='text'
+                            className="message-input"
+                            type="text"
                             onChange={(e) => onChange(e)}
                             ref={chatInput}
                         />
                         <button
-                            className='send-instant-message-btn'
-                            type='submit'>
-                            <i className='fas fa-check-circle fa-2x'></i>
+                            className="send-instant-message-btn"
+                            type="submit"
+                        >
+                            <img
+                                className="send-message-icon"
+                                src={checkCircleIcon}
+                                alt="accept icon"
+                            />
                         </button>
                     </div>
                 </form>
             </div>
-            <button className='chat-btn' type='button' onClick={onClick}>
-                <i className='fas fa-comments fa-2x'></i>
+            <button className="chat-btn" type="button" onClick={onClick}>
+                <img
+                    className="chat-icon"
+                    src={commentIcon}
+                    alt="comment icon"
+                />
             </button>
         </aside>
     );

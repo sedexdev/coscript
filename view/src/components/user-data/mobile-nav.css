@@ -1,6 +1,9 @@
 .home-icon {
+    width: 45px;
+    height: auto;
     margin: 10px 0 0 10px;
     color: var(--background-color-dark, #000);
+    cursor: pointer;
 }
 
 .home-icon:hover {

@@ -530,3 +530,14 @@
 .send-instant-message-btn:hover {
     color: rgb(35, 151, 0);
 }
+
+.send-message-icon {
+    width: 25px;
+    height: auto;
+}
+
+.chat-icon {
+    width: 30px;
+    height: auto;
+    margin-top: 5px;
+}

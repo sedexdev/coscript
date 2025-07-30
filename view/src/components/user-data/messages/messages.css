@@ -1,8 +1,9 @@
 .user-message-container {
+    width: 75%;
     border: 1px solid #111;
     box-shadow: 5px 5px 5px #999;
     padding: 10px;
-    margin: 20px 0;
+    margin: 20px auto;
 }
 
 .message-spinner-container {
@@ -33,6 +34,22 @@
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
+    align-items: center;
+    height: 20px;
+}
+
+.icon-top {
+    margin-top: 10px;
+}
+
+.icon-bottom {
+    margin-bottom: 10px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
 .message-title-wrapper {
@@ -54,14 +71,6 @@
 
 .unread {
     background-color: orangered;
-}
-
-.reveal-msg-btn {
-    color: #222;
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
 }
 
 .message-title {
@@ -88,6 +97,7 @@
 .option-btns {
     display: -webkit-box;
     display: flex;
+    justify-content: space-between;
 }
 
 .sender-link {
@@ -110,7 +120,7 @@
 }
 
 .sender {
-    width: 90%;
+    width: 100%;
     border-top: 1px solid #222;
     padding: 10px 0 5px 0;
 }
@@ -128,6 +138,8 @@
 
 .reply-btn,
 .accept-btn {
+    width: 20px;
+    height: auto;
     cursor: pointer;
 }
 

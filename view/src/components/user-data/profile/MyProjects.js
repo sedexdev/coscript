@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
 
+import timesCircleIcon from "../../../img/icons/times-circle.svg";
+
 // Redux
 import { connect } from "react-redux";
 import { saveDate } from "../../../redux/actions/documents";
@@ -41,94 +43,162 @@ const MyProjects = ({
     return (
         <Fragment>
             {displayDeleteProjectWindow && (
-                <div className='delete-project-window'>
-                    <p className='delete-project-heading'>Delete this project completely?</p>
-                    <form className='edit-project-form' onSubmit={(e) => onDeleteProject(e)}>
-                        <div className='project-edit-btn-container'>
-                            {saving && <img src={spinner} className='update-project-loading-spinner' alt='Loading spinner' />}
-                            <button className='cancel-btn' onClick={removeDeleteProjectWindow}>
+                <div className="delete-project-window">
+                    <p className="delete-project-heading">
+                        Delete this project completely?
+                    </p>
+                    <form
+                        className="edit-project-form"
+                        onSubmit={(e) => onDeleteProject(e)}
+                    >
+                        <div className="project-edit-btn-container">
+                            {saving && (
+                                <img
+                                    src={spinner}
+                                    className="update-project-loading-spinner"
+                                    alt="Loading spinner"
+                                />
+                            )}
+                            <button
+                                className="cancel-btn"
+                                onClick={removeDeleteProjectWindow}
+                            >
                                 Cancel
                             </button>
-                            <input className='confirm-btn' type='submit' value='Delete' />
+                            <input
+                                className="confirm-btn"
+                                type="submit"
+                                value="Delete"
+                            />
                         </div>
                     </form>
                 </div>
             )}
             {displayProjectEditWindow && (
-                <div className='edit-project-details-window'>
-                    <p className='edit-project-heading'>Edit '{projectTitle}' details</p>
-                    <form className='edit-project-form' onSubmit={(e) => onSubmitProject(e)}>
-                        <label className='edit-project-label' htmlFor='profile-project-title'>
+                <div className="edit-project-details-window">
+                    <p className="edit-project-heading">
+                        Edit '{projectTitle}' details
+                    </p>
+                    <form
+                        className="edit-project-form"
+                        onSubmit={(e) => onSubmitProject(e)}
+                    >
+                        <label
+                            className="edit-project-label"
+                            htmlFor="profile-project-title"
+                        >
                             Title
                         </label>
                         <input
-                            className='edit-project-data-input'
-                            id='profile-project-title'
-                            type='text'
-                            name='projectTitle'
+                            className="edit-project-data-input"
+                            id="profile-project-title"
+                            type="text"
+                            name="projectTitle"
                             onChange={(e) => onChange(e)}
                             defaultValue={projectTitle}
                         />
-                        <label className='edit-project-label' htmlFor='profile-project-genres'>
+                        <label
+                            className="edit-project-label"
+                            htmlFor="profile-project-genres"
+                        >
                             Genres
                         </label>
                         <input
-                            className='edit-project-data-input'
-                            id='profile-project-genres'
-                            type='text'
-                            name='projectGenres'
+                            className="edit-project-data-input"
+                            id="profile-project-genres"
+                            type="text"
+                            name="projectGenres"
                             onChange={(e) => onChange(e)}
                             defaultValue={projectGenres}
                         />
-                        <label className='edit-project-label' htmlFor='profile-project-description'>
+                        <label
+                            className="edit-project-label"
+                            htmlFor="profile-project-description"
+                        >
                             Description
                         </label>
                         <textarea
-                            className='edit-project-data-textarea'
-                            id='profile-project-description'
-                            type='text'
-                            name='projectDescription'
+                            className="edit-project-data-textarea"
+                            id="profile-project-description"
+                            type="text"
+                            name="projectDescription"
                             onChange={(e) => onChange(e)}
-                            defaultValue={projectDescription}></textarea>
-                        <div className='project-edit-btn-container'>
-                            {saving && <img src={spinner} className='update-project-loading-spinner' alt='Loading spinner' />}
-                            <button className='cancel-btn' onClick={cancelEdit}>
+                            defaultValue={projectDescription}
+                        ></textarea>
+                        <div className="project-edit-btn-container">
+                            {saving && (
+                                <img
+                                    src={spinner}
+                                    className="update-project-loading-spinner"
+                                    alt="Loading spinner"
+                                />
+                            )}
+                            <button className="cancel-btn" onClick={cancelEdit}>
                                 Cancel
                             </button>
-                            <input className='confirm-btn' type='submit' value='Save' />
+                            <input
+                                className="confirm-btn"
+                                type="submit"
+                                value="Save"
+                            />
                         </div>
                     </form>
                 </div>
             )}
             {loading ? (
-                <img className='profile-project-loading-spinner' src={spinner} alt='loading' />
+                <img
+                    className="profile-project-loading-spinner"
+                    src={spinner}
+                    alt="loading"
+                />
             ) : (
                 <Fragment>
                     {user && userProjects && userProjects.length ? (
-                        <div className='my-projects-list'>
+                        <div className="my-projects-list">
                             {userProjects.map((project) => {
                                 return (
-                                    <div className='profile-project-list-element-wrapper' key={project.projectId}>
+                                    <div
+                                        className="profile-project-list-element-wrapper"
+                                        key={project.projectId}
+                                    >
                                         <li
-                                            className='profile-project-list-element'
+                                            className="profile-project-list-element"
                                             onClick={async () => {
                                                 await saveDate(project);
-                                                props.history.push(`/editor${project.url}`);
-                                            }}>
+                                                props.history.push(
+                                                    `/editor${project.url}`
+                                                );
+                                            }}
+                                        >
                                             {project.title}
                                         </li>
-                                        <div className='project-options-container'>
-                                            <button className='edit-icon-btn' type='button'>
+                                        <div className="project-options-container">
+                                            <button
+                                                className="edit-icon-btn"
+                                                type="button"
+                                            >
                                                 <img
                                                     src={editIcon}
-                                                    className='edit-input-icon'
+                                                    className="edit-input-icon"
                                                     id={project.projectId}
-                                                    onClick={(e) => onClickProject(e)}
-                                                    alt='Edit input icon'
+                                                    onClick={(e) =>
+                                                        onClickProject(e)
+                                                    }
+                                                    alt="Edit input icon"
                                                 />
                                             </button>
-                                            <button className='delete-project-btn' onClick={openDeleteProjectWindow}>
-                                                <i className='far fa-times-circle' id={project.projectId}></i>
+                                            <button
+                                                className="delete-project-btn"
+                                                onClick={
+                                                    openDeleteProjectWindow
+                                                }
+                                            >
+                                                <img
+                                                    className="delete-project-icon"
+                                                    id={project.projectId}
+                                                    src={timesCircleIcon}
+                                                    alt="delete icon"
+                                                />
                                             </button>
                                         </div>
                                     </div>
@@ -136,16 +206,18 @@ const MyProjects = ({
                             })}
                         </div>
                     ) : (
-                        <div className='projects-warning'>
+                        <div className="projects-warning">
                             <p>
-                                You don't have any active projects at the moment... create one{" "}
+                                You don't have any active projects at the
+                                moment... create one{" "}
                                 <Link
-                                    to='/editor'
+                                    to="/editor"
                                     onClick={async () => {
                                         await props.clearProjectData();
                                         await props.clearFileData();
-                                    }}>
-                                    <span className='profile-link'>here</span>
+                                    }}
+                                >
+                                    <span className="profile-link">here</span>
                                 </Link>
                             </p>
                         </div>
@@ -178,4 +250,6 @@ MyProjects.propTypes = {
     clearProjectData: PropTypes.func.isRequired,
 };
 
-export default connect(null, { saveDate, clearFileData, clearProjectData })(withRouter(MyProjects));
+export default connect(null, { saveDate, clearFileData, clearProjectData })(
+    withRouter(MyProjects)
+);

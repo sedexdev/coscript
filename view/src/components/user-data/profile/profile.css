@@ -176,6 +176,11 @@
     transition: transform, 0.2s, -webkit-transform;
 }
 
+.delete-project-icon {
+    width: 20px;
+    height: auto;
+}
+
 .save-btn-container {
     text-align: center;
     margin: 0 auto;
@@ -358,6 +363,11 @@
     );
 }
 
+.cancel-colab-icon {
+    width: 20px;
+    height: auto;
+}
+
 .profile-project-list-element {
     list-style: none;
     line-height: 40px;
@@ -430,17 +440,9 @@
     border: none;
     outline: none;
     margin-left: 10px;
-}
-
-.delete-project-btn:hover {
-    -webkit-transform: scale(1.8);
-    transform: scale(1.8);
-    -webkit-transition: 0.2s, -webkit-transform;
-    transition: 0.2s, -webkit-transform;
-    transition: transform, 0.2s;
-    transition: transform, 0.2s, -webkit-transform;
     cursor: pointer;
 }
+
 
 .update-project-loading-spinner {
     height: auto;

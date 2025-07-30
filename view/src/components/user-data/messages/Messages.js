@@ -6,11 +6,29 @@ import MobileNav from "../MobileNav";
 import SidePanel from "../SidePanel";
 import Alert from "../../alert/Alert";
 
+// icon imports
+import sortUpIcon from "../../../img/icons/sort-up.svg";
+import sortDownIcon from "../../../img/icons/sort-down.svg";
+import checkCircleIcon from "../../../img/icons/check-circle.svg";
+import timesCircleIcon from "../../../img/icons/times-circle.svg";
+import banIcon from "../../../img/icons/ban.svg";
+import replyIcon from "../../../img/icons/reply.svg";
+
 // Redux
 import { connect } from "react-redux";
-import { sendMessage, setMessageRead, loadUserProfile, addFriend, sendDeclineMsg, blockUser } from "../../../redux/actions/profile";
+import {
+    sendMessage,
+    setMessageRead,
+    loadUserProfile,
+    addFriend,
+    sendDeclineMsg,
+    blockUser,
+} from "../../../redux/actions/profile";
 import { addCollaborator } from "../../../redux/actions/documents";
-import { getUserMessages, isAdmin } from "../../../redux/auxiliary/user-messages";
+import {
+    getUserMessages,
+    isAdmin,
+} from "../../../redux/auxiliary/user-messages";
 
 import PropTypes from "prop-types";
 
@@ -213,8 +231,15 @@ export class Messages extends React.Component {
     async sendReply(e) {
         e.preventDefault();
         this.showSubmitSpinner();
-        const { replyMsg, senderId, projectTitle, projectId, recipientId } = this.state;
-        const success = await this.props.sendMessage(replyMsg, recipientId, projectTitle, projectId, senderId);
+        const { replyMsg, senderId, projectTitle, projectId, recipientId } =
+            this.state;
+        const success = await this.props.sendMessage(
+            replyMsg,
+            recipientId,
+            projectTitle,
+            projectId,
+            senderId
+        );
         if (success) {
             this.removeSubmitSpinner();
             this.setState({
@@ -258,7 +283,13 @@ export class Messages extends React.Component {
         const { senderId, sendersName, projectId, projectTitle } = this.state;
         const { user, addCollaborator } = this.props;
         this.showSubmitSpinner();
-        const success = await addCollaborator(senderId, user.userId, sendersName, projectId, projectTitle);
+        const success = await addCollaborator(
+            senderId,
+            user.userId,
+            sendersName,
+            projectId,
+            projectTitle
+        );
         if (success) {
             this.removeSubmitSpinner();
             this.setState({
@@ -334,7 +365,12 @@ export class Messages extends React.Component {
         this.showSubmitSpinner();
         const { senderId, friendName, projectTitle } = this.state;
         const { user, addFriend } = this.props;
-        const success = await addFriend(user.userId, senderId, friendName, projectTitle);
+        const success = await addFriend(
+            user.userId,
+            senderId,
+            friendName,
+            projectTitle
+        );
         if (success) {
             this.setState({
                 revealFriendWindow: false,
@@ -418,191 +454,387 @@ export class Messages extends React.Component {
 
         return (
             <Fragment>
-                <main className='profile-container'>
+                <main className="profile-container">
                     <MobileNav />
                     <SidePanel />
                     {revealReplyWindow && (
-                        <div className='reply-message-box'>
+                        <div className="reply-message-box">
                             {" "}
                             <form onSubmit={(e) => this.sendReply(e)}>
-                                <p className='reply-heading'>Reply to {sendersName}</p>
-                                <div className='reply-container'>
-                                    <textarea className='reply-input' name='replyMsg' type='text' onChange={(e) => this.onChange(e)}></textarea>
+                                <p className="reply-heading">
+                                    Reply to {sendersName}
+                                </p>
+                                <div className="reply-container">
+                                    <textarea
+                                        className="reply-input"
+                                        name="replyMsg"
+                                        type="text"
+                                        onChange={(e) => this.onChange(e)}
+                                    ></textarea>
                                 </div>
-                                <div className='btn-container'>
-                                    {submitted && <img className='reply-msg-loading-spinner' src={spinner} alt='loading' />}
-                                    <button className='cancel-btn' onClick={this.cancelReply}>
+                                <div className="btn-container">
+                                    {submitted && (
+                                        <img
+                                            className="reply-msg-loading-spinner"
+                                            src={spinner}
+                                            alt="loading"
+                                        />
+                                    )}
+                                    <button
+                                        className="cancel-btn"
+                                        onClick={this.cancelReply}
+                                    >
                                         Cancel
                                     </button>
-                                    <input className='confirm-btn' type='submit' value='Send' />
+                                    <input
+                                        className="confirm-btn"
+                                        type="submit"
+                                        value="Send"
+                                    />
                                 </div>
                             </form>
                         </div>
                     )}
 
                     {revealCollaborateWindow && (
-                        <div className='collaborate-box'>
+                        <div className="collaborate-box">
                             {" "}
                             <form onSubmit={(e) => this.collaborate(e)}>
-                                <p className='collaborate-heading'>
-                                    Add <b>{sendersName}</b> as a collaborator on {projectTitle}?
+                                <p className="collaborate-heading">
+                                    Add <b>{sendersName}</b> as a collaborator
+                                    on {projectTitle}?
                                 </p>
-                                <div className='btn-container'>
-                                    {submitted && <img className='reply-msg-loading-spinner' src={spinner} alt='loading' />}
-                                    <button className='cancel-btn' onClick={this.cancelCollaborate}>
+                                <div className="btn-container">
+                                    {submitted && (
+                                        <img
+                                            className="reply-msg-loading-spinner"
+                                            src={spinner}
+                                            alt="loading"
+                                        />
+                                    )}
+                                    <button
+                                        className="cancel-btn"
+                                        onClick={this.cancelCollaborate}
+                                    >
                                         Cancel
                                     </button>
-                                    <input className='confirm-btn' type='submit' value='Add' />
+                                    <input
+                                        className="confirm-btn"
+                                        type="submit"
+                                        value="Add"
+                                    />
                                 </div>
                             </form>
                         </div>
                     )}
 
                     {revealFriendWindow && (
-                        <div className='collaborate-box'>
+                        <div className="collaborate-box">
                             {" "}
                             <form onSubmit={(e) => friendAction(e)}>
                                 {actionName === "accept" && (
-                                    <p className='collaborate-heading'>
-                                        Accept <b>{friendName}'s</b> request and add as a friend?
+                                    <p className="collaborate-heading">
+                                        Accept <b>{friendName}'s</b> request and
+                                        add as a friend?
                                     </p>
                                 )}
                                 {actionName === "decline" && (
-                                    <p className='collaborate-heading'>
+                                    <p className="collaborate-heading">
                                         Decline <b>{friendName}'s</b> request?
                                     </p>
                                 )}
                                 {actionName === "block" && (
-                                    <p className='collaborate-heading'>
-                                        Block <b>{friendName}</b>? You will no longer be able to send or receive communications to or from this user.
+                                    <p className="collaborate-heading">
+                                        Block <b>{friendName}</b>? You will no
+                                        longer be able to send or receive
+                                        communications to or from this user.
                                     </p>
                                 )}
-                                <div className='btn-container'>
-                                    {submitted && <img className='reply-msg-loading-spinner' src={spinner} alt='loading' />}
-                                    <button className='cancel-btn' onClick={this.removeFriendWindow}>
+                                <div className="btn-container">
+                                    {submitted && (
+                                        <img
+                                            className="reply-msg-loading-spinner"
+                                            src={spinner}
+                                            alt="loading"
+                                        />
+                                    )}
+                                    <button
+                                        className="cancel-btn"
+                                        onClick={this.removeFriendWindow}
+                                    >
                                         Cancel
                                     </button>
-                                    {actionName === "accept" && <input className='confirm-btn' type='submit' value='Add' />}
-                                    {actionName === "decline" && <input className='confirm-btn' type='submit' value='Decline' />}
-                                    {actionName === "block" && <input className='confirm-btn' type='submit' value='Block' />}
+                                    {actionName === "accept" && (
+                                        <input
+                                            className="confirm-btn"
+                                            type="submit"
+                                            value="Add"
+                                        />
+                                    )}
+                                    {actionName === "decline" && (
+                                        <input
+                                            className="confirm-btn"
+                                            type="submit"
+                                            value="Decline"
+                                        />
+                                    )}
+                                    {actionName === "block" && (
+                                        <input
+                                            className="confirm-btn"
+                                            type="submit"
+                                            value="Block"
+                                        />
+                                    )}
                                 </div>
                             </form>
                         </div>
                     )}
 
                     <Alert />
-                    <div className='user-info-container'>
-                        <h1 className='profile-h1'>My Messages</h1>
+                    <div className="user-info-container">
+                        <h1 className="profile-h1">My Messages</h1>
                         {loading ? (
-                            <div className='message-spinner-container'>
-                                <img className='message-spinner' src={spinner} alt='loading' />
-                                <p className='message-loading-msg'>Loading messages...</p>
+                            <div className="message-spinner-container">
+                                <img
+                                    className="message-spinner"
+                                    src={spinner}
+                                    alt="loading"
+                                />
+                                <p className="message-loading-msg">
+                                    Loading messages...
+                                </p>
                             </div>
                         ) : (
-                            <section className='profile'>
-                                <div className='user-messages'>
+                            <section className="profile">
+                                <div className="user-messages">
                                     {messages && messages.length ? (
                                         messages.map((message) => {
                                             return (
-                                                <div className='user-message-container' key={message.id}>
-                                                    <div className='message-title-container'>
-                                                        <div className='message-title-wrapper'>
-                                                            <div className={message.read ? "read-icon read" : "read-icon unread"}></div>
-                                                            <p className='message-title'>
-                                                                {message.friendRequest ? "You have a friend request" : message.text}
+                                                <div
+                                                    className="user-message-container"
+                                                    key={message.id}
+                                                >
+                                                    <div className="message-title-container">
+                                                        <div className="message-title-wrapper">
+                                                            <div
+                                                                className={
+                                                                    message.read
+                                                                        ? "read-icon read"
+                                                                        : "read-icon unread"
+                                                                }
+                                                            ></div>
+                                                            <p className="message-title">
+                                                                {message.friendRequest
+                                                                    ? "You have a friend request"
+                                                                    : message.text}
                                                             </p>
                                                         </div>
-                                                        <button
-                                                            className='reveal-msg-btn'
-                                                            onClick={() => {
-                                                                this.onClick(message.id);
-                                                                this.checkAdmin(message.projectId);
-                                                            }}>
-                                                            {messageVisibilities[message.id] ? (
-                                                                <i className='fas fa-sort-up'></i>
-                                                            ) : (
-                                                                <i className='fas fa-sort-down'></i>
-                                                            )}
-                                                        </button>
-                                                    </div>
-                                                    {messageVisibilities[message.id] && (
-                                                        <Fragment>
-                                                            <p className='message'>
-                                                                {message.text.split("\n").map((section) => {
-                                                                    let key = uuid.v4();
-                                                                    return (
-                                                                        <span key={key}>
-                                                                            {section}
-                                                                            <br />
-                                                                            <br />
-                                                                        </span>
+                                                        {messageVisibilities[
+                                                            message.id
+                                                        ] ? (
+                                                            <img
+                                                                className="icon icon-top"
+                                                                src={sortUpIcon}
+                                                                alt="Sort up icon"
+                                                                onClick={() => {
+                                                                    this.onClick(
+                                                                        message.id
                                                                     );
-                                                                })}
+                                                                    this.checkAdmin(
+                                                                        message.projectId
+                                                                    );
+                                                                }}
+                                                            />
+                                                        ) : (
+                                                            <img
+                                                                className="icon icon-bottom"
+                                                                src={
+                                                                    sortDownIcon
+                                                                }
+                                                                alt="Sort down icon"
+                                                                onClick={() => {
+                                                                    this.onClick(
+                                                                        message.id
+                                                                    );
+                                                                    this.checkAdmin(
+                                                                        message.projectId
+                                                                    );
+                                                                }}
+                                                            />
+                                                        )}
+                                                    </div>
+                                                    {messageVisibilities[
+                                                        message.id
+                                                    ] && (
+                                                        <Fragment>
+                                                            <p className="message">
+                                                                {message.text
+                                                                    .split("\n")
+                                                                    .map(
+                                                                        (
+                                                                            section
+                                                                        ) => {
+                                                                            let key =
+                                                                                uuid.v4();
+                                                                            return (
+                                                                                <span
+                                                                                    key={
+                                                                                        key
+                                                                                    }
+                                                                                >
+                                                                                    {
+                                                                                        section
+                                                                                    }
+                                                                                    <br />
+                                                                                    <br />
+                                                                                </span>
+                                                                            );
+                                                                        }
+                                                                    )}
                                                             </p>
-                                                            <p className='sender'>
+                                                            <p className="sender">
                                                                 <b>Sender</b>:{" "}
                                                                 <button
-                                                                    className='sender-link'
+                                                                    className="sender-link"
                                                                     onClick={async () => {
-                                                                        await loadUserProfile(message.sender.id);
-                                                                        const { userProfile } = this.props;
-                                                                        history.push(`/profile/user/${userProfile.id}`);
-                                                                    }}>
-                                                                    {message.sender.name}
+                                                                        await loadUserProfile(
+                                                                            message
+                                                                                .sender
+                                                                                .id
+                                                                        );
+                                                                        const {
+                                                                            userProfile,
+                                                                        } =
+                                                                            this
+                                                                                .props;
+                                                                        history.push(
+                                                                            `/profile/user/${userProfile.id}`
+                                                                        );
+                                                                    }}
+                                                                >
+                                                                    {
+                                                                        message
+                                                                            .sender
+                                                                            .name
+                                                                    }
                                                                 </button>
                                                             </p>
-                                                            <p className='related'>
-                                                                <b>Regarding</b>: {message.projectTitle}
+                                                            <p className="related">
+                                                                <b>Regarding</b>
+                                                                :{" "}
+                                                                {
+                                                                    message.projectTitle
+                                                                }
                                                             </p>
-                                                            <div className='date-and-reply'>
-                                                                <p className='sent'>
-                                                                    <b>Sent</b>: {message.date}
+                                                            <div className="date-and-reply">
+                                                                <p className="sent">
+                                                                    <b>Sent</b>:{" "}
+                                                                    {
+                                                                        message.date
+                                                                    }
                                                                 </p>
-                                                                <div className='option-btns'>
+                                                                <div className="option-btns">
                                                                     {message.friendRequest ? (
                                                                         <Fragment>
-                                                                            <button className='accept-btn-container'>
+                                                                            <button className="accept-btn-container">
                                                                                 {" "}
-                                                                                <i
-                                                                                    className='fas fa-check-circle fa-2x accept-btn'
-                                                                                    title='Accept'
-                                                                                    onClick={() => this.showFriendWindow(message, "accept")}></i>
+                                                                                <img
+                                                                                    src={
+                                                                                        checkCircleIcon
+                                                                                    }
+                                                                                    className="accept-btn"
+                                                                                    title="Accept"
+                                                                                    onClick={() =>
+                                                                                        this.showFriendWindow(
+                                                                                            message,
+                                                                                            "accept"
+                                                                                        )
+                                                                                    }
+                                                                                />
                                                                             </button>
-                                                                            <button className='accept-btn-container'>
+                                                                            <button className="accept-btn-container">
                                                                                 {" "}
-                                                                                <i
-                                                                                    className='fas fa-times-circle fa-2x accept-btn'
-                                                                                    title='Decline'
-                                                                                    onClick={() => this.showFriendWindow(message, "decline")}></i>
+                                                                                <img
+                                                                                    src={
+                                                                                        timesCircleIcon
+                                                                                    }
+                                                                                    className="accept-btn"
+                                                                                    title="Decline"
+                                                                                    onClick={() =>
+                                                                                        this.showFriendWindow(
+                                                                                            message,
+                                                                                            "decline"
+                                                                                        )
+                                                                                    }
+                                                                                />
                                                                             </button>
-                                                                            <button className='accept-btn-container'>
+                                                                            <button className="accept-btn-container">
                                                                                 {" "}
-                                                                                <i
-                                                                                    className='fas fa-ban fa-2x accept-btn'
-                                                                                    title='Block user'
-                                                                                    onClick={() => this.showFriendWindow(message, "block")}></i>
+                                                                                <img
+                                                                                    src={
+                                                                                        banIcon
+                                                                                    }
+                                                                                    className="accept-btn"
+                                                                                    title="Block user"
+                                                                                    onClick={() =>
+                                                                                        this.showFriendWindow(
+                                                                                            message,
+                                                                                            "block"
+                                                                                        )
+                                                                                    }
+                                                                                />
                                                                             </button>
                                                                         </Fragment>
                                                                     ) : (
                                                                         <Fragment>
                                                                             <button
-                                                                                className='reply-btn-container'
-                                                                                onClick={() => this.openReplyWindow(message)}>
-                                                                                <i className='fas fa-reply fa-2x reply-btn' title='Reply'></i>
+                                                                                className="reply-btn-container"
+                                                                                onClick={() =>
+                                                                                    this.openReplyWindow(
+                                                                                        message
+                                                                                    )
+                                                                                }
+                                                                            >
+                                                                                <img
+                                                                                    src={
+                                                                                        replyIcon
+                                                                                    }
+                                                                                    className="reply-btn"
+                                                                                    title="Reply"
+                                                                                />
                                                                             </button>
-                                                                            {admins[message.projectId] ? (
+                                                                            {admins[
+                                                                                message
+                                                                                    .projectId
+                                                                            ] ? (
                                                                                 <button
-                                                                                    className='accept-btn-container'
-                                                                                    onClick={() => this.openCollaborateWindow(message)}>
-                                                                                    <i
-                                                                                        className='fas fa-check-circle fa-2x accept-btn'
-                                                                                        title='Collaborate'></i>
+                                                                                    className="accept-btn-container"
+                                                                                    onClick={() =>
+                                                                                        this.openCollaborateWindow(
+                                                                                            message
+                                                                                        )
+                                                                                    }
+                                                                                >
+                                                                                    <img
+                                                                                        src={
+                                                                                            checkCircleIcon
+                                                                                        }
+                                                                                        className="accept-btn"
+                                                                                        title="Collaborate"
+                                                                                    />
                                                                                 </button>
                                                                             ) : (
-                                                                                <button className='accept-btn-container' disabled>
-                                                                                    <i
-                                                                                        className='fas fa-check-circle fa-2x accept-btn'
-                                                                                        title='Collaborate'></i>
+                                                                                <button
+                                                                                    className="accept-btn-container"
+                                                                                    disabled
+                                                                                >
+                                                                                    <img
+                                                                                        src={
+                                                                                            checkCircleIcon
+                                                                                        }
+                                                                                        className="accept-btn"
+                                                                                        title="Collaborate"
+                                                                                    />
                                                                                 </button>
                                                                             )}
                                                                         </Fragment>
@@ -615,7 +847,9 @@ export class Messages extends React.Component {
                                             );
                                         })
                                     ) : (
-                                        <p className='empty-message'>You currently have no messages</p>
+                                        <p className="empty-message">
+                                            You currently have no messages
+                                        </p>
                                     )}
                                 </div>
                             </section>
